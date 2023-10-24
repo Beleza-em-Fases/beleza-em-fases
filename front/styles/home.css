@@ -1,0 +1,54 @@
+body  {
+    margin: 0px;
+}
+
+header {
+    background-color: #d90d43;
+}
+
+main {
+    background-color: #f7f3eb;
+}
+
+footer {
+    background-color: #d90d43;
+}
+
+.line-one {
+    height: 7px;
+    background-color: #f2e0bd;
+    margin-bottom: 4px;
+}
+
+.line-two {
+    height: 7px;
+    background-color: #f2b035;
+    margin-bottom: 4px;
+}
+
+.line-three {
+    height: 7px;
+    background-color: #d90d43;
+    margin-bottom: 4px;
+}
+
+.line-four {
+    height: 7px;
+    background-color: #700927;
+}
+
+.carousel {
+
+}
+
+.principal {
+
+}
+
+.left {
+
+}
+
+.right {
+
+}
