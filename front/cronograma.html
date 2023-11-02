@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Inclua o link para a biblioteca do FontAwesome no cabeçalho -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        /* Estilos para o cabeçalho */
+        .header {
+            background-color: #d90d43;
+            color: #f2e0bd;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Capuche', sans-serif;
+        }
+
+        /* Incorporação da fonte "Capuche" */
+        @font-face {
+            font-family: 'Capuche';
+            src: url('/front/fonts/Capuche Trial.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Estilos para a logo */
+        .logo {
+            margin-left: 20px;
+        }
+
+        /* Estilos para os links de navegação */
+        .nav {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* Centralize as palavras do menu */
+        }
+
+        .nav li {
+            margin: 0 20px; /* Aumente ou diminua o valor para ajustar o espaçamento entre as palavras */
+        }
+
+        .nav a {
+            color: #f2e0bd; /* Altere a cor das palavras do menu */
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        /* Estilos para a barra de pesquisa */
+        .caixa-de-busca {
+            display: flex;
+            align-items: center;
+            background-color: #f7f3eb; /* Altere a cor da caixa de busca para #f7f3eb */
+            border-radius: 5px;
+            padding: 5px;
+            width: 35%;
+            margin: 0 auto;
+        }
+
+        .lupa {
+            margin-right: 5px;
+            color: #4B3C2F; /* Defina a cor do ícone da lupa */
+        }
+
+        .campo-de-busca {
+            border: none;
+            outline: none;
+            background-color: transparent;
+            flex-grow: 1;
+        }
+
+        /* Estilos para o ícone do usuário */
+        .user-icon {
+            cursor: pointer;
+            margin-left: 10px; /* Ajuste a margem esquerda para mover o ícone para a esquerda */
+        }
+
+        .user-icon-container {
+            position: relative;
+        }
+
+        .icon {
+            width: 60px;
+            height: 60px;
+        }
+
+        /* Estilos para o menu de usuário */
+        .user-menu {
+            position: absolute;
+            background-color: #f2e0bd;
+            color: #f2b035;
+            list-style: none;
+            padding: 10px;
+            display: none;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 196, 0, 0.2);
+            z-index: 1;
+            text-align: center;
+            top: 100%;
+            right: 0;
+        }
+
+        .user-menu li {
+            margin: 10px 0;
+            text-decoration: none; /* Remova o sublinhado dos textos do menu */
+        }
+
+        .user-menu li.separator {
+            border-top: 0.9px solid #f2b035;
+        }
+
+        .logo {
+            width: 130px;
+            height: 95px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>
+            <a href="home.html">
+                <img class="logo" src="/front/images/logo.png" alt="Logo do Site">
+            </a>
+        </div>
+        <ul class="nav">
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="forum.html">Forum</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="glossario.html">Glossário</a></li>
+        </ul>
+        <div class="caixa-de-busca">
+            <i class="fas fa-search lupa"></i> <!-- Use a classe "fas fa-search" para o ícone da lupa -->
+            <span class="texto-buscar"></span>
+            <input name="buscar" type="text" class="campo-de-busca" placeholder="Buscar" onkeydown="enviarBusca(event)">
+        </div>
+        <div class="user-icon-container">
+            <div class="user-icon" id="userIcon">
+                <img class="icon" src="/front/images/icone2.jpg" alt="Ícone de Usuário">
+            </div>
+            <ul class="user-menu" id="userMenu">
+                <li><a href="perfil.html" style="color: #f2b035;">Perfil</a></li>
+                <li><a href="cronograma.html" style="color: #f2b035;">Cronograma</a></li>
+                <li><a href="configuracoes.html" style="color: #f2b035;">Configurações</a></li>
+                <li class="separator"></li>
+                <li><a href="sair.html" style="color: #f2b035;">Sair</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        // JavaScript para mostrar/ocultar o menu de usuário
+        const userIcon = document.getElementById('userIcon');
+        const userMenu = document.getElementById('userMenu');
+
+        userIcon.addEventListener('click', function () {
+            if (userMenu.style.display === 'block') {
+                userMenu.style.display = 'none';
+            } else {
+                userMenu.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

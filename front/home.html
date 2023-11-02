@@ -1,3 +1,4 @@
+Não é possível criar, editar ou fazer upload de arquivos … Você não tem armazenamento suficiente para criar, editar e fazer upload de arquivos. Aproveite 100 GB de armazenamento por R$ 6,99 R$ 1,69 por mês, durante 3 meses.
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,25 +8,115 @@
     <title>Home</title>
     <link rel="icon" href="images/favicon.svg" type="image/png">
     <link rel="stylesheet" href="styles/home.css">
-    <link rel="stylesheet" href="scripts/home.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" rel="stylesheet">
-
+    <!--Maria: Essa referência é para conseguirmos utilizar os recursos do Framework Bootstrap--> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> <!--a-->
+    <!--Maria: Esse script é para conseguirmos utilizar os recursos do Framework Bootstrap--> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>a</header>
+    <header>
+        <div class="header">
+          <div>
+              <a href="home.html">
+                  <img class="logo" src="/front/images/logo.png" alt="Logo do Site">
+              </a>
+          </div>
+          <ul class="nav">
+              <li><a href="produtos.html">Produtos</a></li>
+              <li><a href="forum.html">Forum</a></li>
+              <li><a href="quiz.html">Quiz</a></li>
+              <li><a href="glossario.html">Glossário</a></li>
+          </ul>
+          <div class="caixa-de-busca">
+              <i class="fas fa-search lupa"></i> 
+              <span class="texto-buscar"></span>
+              <input name="buscar" type="text" class="campo-de-busca" placeholder="Buscar" onkeydown="enviarBusca(event)">
+          </div>
+          <div class="user-icon-container">
+              <div class="user-icon" id="userIcon">
+                  <img class="icon" src="/front/images/icone2.jpg" alt="Ícone de Usuário">
+              </div>
+              <ul class="user-menu" id="userMenu">
+                  <li><a href="perfil.html" style="color: #f2b035;">Perfil</a></li>
+                  <li><a href="cronograma.html" style="color: #f2b035;">Cronograma</a></li>
+                  <li><a href="configuracoes.html" style="color: #f2b035;">Configurações</a></li>
+                  <li class="separator"></li>
+                  <li><a href="sair.html" style="color: #f2b035;">Sair</a></li>
+              </ul>
+          </div>
+      </div>
+    </header>
+
+    <!--Maria: As div abaixo representam os detalhes das linhas abaixo do header, não possui funcionalidades nem conteúdo, apenas para fins estéticos do site-->
     <div class="line-one"></div>
     <div class="line-two"></div>
     <div class="line-three"></div>
     <div class="line-four"></div>
+
     <main>
-        <div class="carousel">
-            a
+        <!--Maria: O carrossel de propaganda e informações do site abaixo do header --> 
+        <!--Laís: Fez o carrossel com o Bootstrap-->
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <!--Laís: Cria link com a pág. do quiz, então quando a pessoa clicar na imagem ela é direcionada direto para o quiz.-->
+              <a href="quiz.html">
+                  <img src="/front/images/home/Quizpropaganda.png" class="d-block w-100" alt="Propaganda do Quiz">
+              </a>
+            </div>
+            <div class="carousel-item">
+              <img src="/front/images/home/propaganda1.jpeg" class="d-block w-100" alt="Propaganda1">
+            </div>
+            <div class="carousel-item">
+              <img src="/front/images/home/propaganda2.jpeg" class="d-block w-100" alt="Propaganda2">
+            </div>
+            <div class="carousel-item">
+              <img src="/front/images/home/propaganda3.jpeg" class="d-block w-100" alt="Propaganda3">
+            </div>
+          </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
         </div>
 
-        <div class="pricipal">
-            <div class="left"></div>
-            <div class="right"></div>
+          <div class="line-one"></div>
+          <div class="line-two"></div>
+          <div class="line-three"></div>
+          <div class="line-four"></div>
+
+            <!-- Luiza - Bloco de código (começo)-->
+        <div class="container">
+          <div class="flex-item">
+            <p class="title-grid">Indicação de produtos</p>
+          </div>
+          <div class="flex-item">
+            <p class="title-grid">Dicas</p>
+          <div class="slider-container">
+          <div class="grid-controls">
+            <button class="slider-buttons" id="previousButton" onclick="previousSlide()">&lt;</button>
+            <div class="grid-container">
+              <div class="grid-item-dicas">Dica 1</div>
+              <div class="grid-item-dicas">Dica 2</div>
+              <div class="grid-item-dicas">Dica 3</div>
+              <div class="grid-item-dicas">Dica 4</div>
+            </div>
+            <button class="slider-buttons" id="nextButton" onclick="nextSlide()">&gt;</button>
+          </div>
+          </div>
+          </div>
         </div>
+            <!-- Luiza - Bloco de código (fim)-->
     </main>
     <footer>a</footer>
     <script src="scripts/home.js"></script>
