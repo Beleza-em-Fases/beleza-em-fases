@@ -45,6 +45,11 @@ body  {
     color: #f2e0bd; /* Altera a cor das palavras do menu */
     text-decoration: none;
     font-size: 20px;
+    transition: color 0.3s; /* Adiciona uma transição para a mudança de cor */
+}
+
+.nav a:hover {
+    color: #f2b035; /* Altera a cor ao passar o mouse sobre as palavras do menu */
 }
 
 /* Maria: Estilos para a barra de pesquisa */
