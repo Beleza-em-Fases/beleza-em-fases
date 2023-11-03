@@ -14,10 +14,22 @@ body  {
     font-family: 'Capuche', sans-serif;
 }
 
+.titulo {
+    font-family: 'Capuche', sans-serif;
+}
+
 /* Maria: Incorporação da fonte "Capuche", escolhida para títulos do site */
 @font-face {
     font-family: 'Capuche';
     src: url('/front/fonts/Capuche Trial.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Maria: Incorporação da fonte "Moon", escolhida para textos do site */
+@font-face {
+    font-family: 'Moon';
+    src: url('/front/fonts/Moon\ Light.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -236,7 +248,7 @@ footer {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 1vw;
     justify-items: center;
     width: 45vw;
@@ -254,6 +266,7 @@ footer {
     font-size: 20px;
     font-weight: 500;
     color: #f2b035;
+    font-family: 'Moon', sans-serif;
 }
 
 .grid-item-indicacao {
@@ -261,24 +274,13 @@ footer {
     background: #f2e0bd;
     padding: 20px;
     text-align: center;
-    align-items: center;
     border-radius: 10%;
     height: 15vh;
     width: 10vw;
     font-size: 10px;
     color: #f2b035;
     align-items: left;
-}
-
-.grid-container-indicacao {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 1vw;
-    grid-template: none;
-    justify-items: center;
-    width: 20vw;
-}
+} 
 
 .grid-controls-indicacao {
     display: flex;
@@ -312,7 +314,16 @@ footer {
     justify-content: center;
 }
 
-.slider-buttons {
+.slider-buttons-dicas {
+    margin: 0 5px;
+    border: none;
+    background-color: #f6eed8;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.slider-buttons-indicacao {
     margin: 0 5px;
     border: none;
     background-color: #f6eed8;
