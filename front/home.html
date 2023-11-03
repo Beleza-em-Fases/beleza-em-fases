@@ -1,4 +1,3 @@
-Não é possível criar, editar ou fazer upload de arquivos … Você não tem armazenamento suficiente para criar, editar e fazer upload de arquivos. Aproveite 100 GB de armazenamento por R$ 6,99 R$ 1,69 por mês, durante 3 meses.
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -97,28 +96,60 @@ Não é possível criar, editar ou fazer upload de arquivos … Você não tem a
 
             <!-- Luiza - Bloco de código (começo)-->
         <div class="container-dicas">
-          <div class="flex-item">
+          <div>
+            <!--Indicação-->
             <p class="title-grid">Indicação de produtos</p>
-          </div>
-          <div class="flex-item">
+        </div>
+        <div class="grid-controls-indicacao">
+            <button class="slider-buttons" id="previousButton" onclick="previousSlide(indicacao)">&lt;</button>
+        </div>
+        <div class="grid-container-indicacao">
+            <div class="grid-item-indicacao">Imagem 1</div>
+            <div class="grid-item-indicacao">Imagem 2</div>
+            <div class="grid-item-indicacao">Imagem 3</div>
+            <div class="grid-item-indicacao">Imagem 4</div>
+            <div class="grid-item-indicacao">Imagem 5</div>
+            <div class="grid-item-indicacao">Imagem 6</div>
+            <div class="grid-item-indicacao">Imagem 7</div>
+            <div class="grid-item-indicacao">Imagem 8</div>
+        </div>
+        <button class="slider-buttons" id="nextButton" onclick="nextSlide(indicacao)">&gt;</button>
+        <!-- Luiza - Bloco de código (fim)-->
+        <!-- Dicas -->  
+        <div class="flex-item">
             <p class="title-grid">Dicas</p>
           <div class="slider-container">
           <div class="grid-controls">
             <button class="slider-buttons" id="previousButton" onclick="previousSlide()">&lt;</button>
             <div class="grid-container">
-              <div class="grid-item-dicas">Dica 1</div>
-              <div class="grid-item-dicas">Dica 2</div>
-              <div class="grid-item-dicas">Dica 3</div>
-              <div class="grid-item-dicas">Dica 4</div>
+              <div class="grid-item-dicas">Deixe o shampoo descansar no coro cabeludo durante 2 minutinhos, para evitar a oleosidade.</div>
+              <div class="grid-item-dicas">Escove os fios antes de lavá-los para ativar a circulação.</div>
+              <div class="grid-item-dicas">Seque o cabelo sem esfregá-lo com a toalha e penteie com cuidado para evitar o frizz e a quebra dos fios.</div>
+              <div class="grid-item-dicas">Finalize a lavagem com um jato de água fria para dar um brilho.</div>
             </div>
             <button class="slider-buttons" id="nextButton" onclick="nextSlide()">&gt;</button>
           </div>
           </div>
           </div>
         </div>
-            <!-- Luiza - Bloco de código (fim)-->
     </main>
-    <footer>a</footer>
+    
+    <div class="fline-four"></div>
+    <div class="line-three"></div>
+    <div class="line-two"></div>
+    <div class="fline-one"></div>
+
+    <!--Maria: HTML e CSS do Footer feito por mim com modelo do Bootstrap-->
+    <footer class="py-3">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="/front/home.html" class="nav-link px-2">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2">Privacidade</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2">Contato</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2">Sobre Nós</a></li>
+      </ul>
+      <p class="text-center">&copy; Beleza Em Fases, Inc</p>
+    </footer>
     <script src="scripts/home.js"></script>
 </body>
 </html>

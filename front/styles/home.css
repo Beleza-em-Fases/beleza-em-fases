@@ -76,6 +76,23 @@ body  {
     flex-grow: 1;
 }
 
+/*Maria: Altera a cor do placeholder*/
+::-webkit-input-placeholder {
+    color: #f2b035;
+ }
+ 
+ :-moz-placeholder { /* Para Firefox 18- */
+    color: #f2b035;  
+ }
+ 
+ ::-moz-placeholder {  /* Para Firefox 19+ */
+    color: #f2b035;  
+ }
+ 
+ :-ms-input-placeholder {  
+    color: #f2b035;  
+ }
+
 /*  Maria: Personalizando o ícone do usuário */
 .user-icon {
     cursor: pointer;
@@ -106,6 +123,7 @@ body  {
     text-align: center;
     top: 100%;
     right: 0;
+    width: 250px;
 }
 
 .user-menu li {
@@ -128,6 +146,8 @@ main {
 
 footer {
     background-color: #d90d43;
+    color: #f6eed8;
+    font-family: 'Capuche', sans-serif;
 }
 
 /*Maria: As linhas seguem um padrão de 7 de pixel, com as cores principais do site e uma distância de 4 de pixel uma da outra*/
@@ -152,6 +172,17 @@ footer {
 .line-four {
     height: 7px;
     background-color: #700927;
+}
+
+.fline-four {
+    height: 7px;
+    background-color: #700927;
+    margin-bottom: 4px;
+}
+
+.fline-one {
+    height: 7px;
+    background-color: #f2e0bd;
 }
 
 /*Laís/Lie: ajusto os botões no tamanho que eu quero */
@@ -205,7 +236,7 @@ footer {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 1vw;
     justify-items: center;
     width: 45vw;
@@ -218,11 +249,40 @@ footer {
     text-align: center;
     align-items: center;
     border-radius: 10%;
-    height: 20vh;
-    width: 10vw;
-    font-size: 22px;
+    height: 36vh;
+    width: 17vw;
+    font-size: 20px;
     font-weight: 500;
     color: #f2b035;
+}
+
+.grid-item-indicacao {
+    margin: 0 4vw 0 4vw;
+    background: #f2e0bd;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    border-radius: 10%;
+    height: 15vh;
+    width: 10vw;
+    font-size: 10px;
+    color: #f2b035;
+    align-items: left;
+}
+
+.grid-container-indicacao {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1vw;
+    grid-template: none;
+    justify-items: center;
+    width: 20vw;
+}
+
+.grid-controls-indicacao {
+    display: flex;
+    align-items: center;
 }
 
 .title-grid {
@@ -255,7 +315,7 @@ footer {
 .slider-buttons {
     margin: 0 5px;
     border: none;
-    background-color: #f7f3eb;
+    background-color: #f6eed8;
     font-size: 20px;
     font-weight: 800;
     cursor: pointer;
@@ -264,16 +324,4 @@ footer {
 .grid-controls {
     display: flex;
     align-items: center;
-}
-
-.principal {
-
-}
-
-.left {
-
-}
-
-.right {
-
 }

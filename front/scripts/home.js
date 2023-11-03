@@ -1,6 +1,7 @@
 //Lógica dos botões - slide (Luiza)
 let slideIndex = 0;
 const slides = document.querySelectorAll('.grid-item-dicas');
+const slides1 = document.querySelectorAll('.grid-item-indicacao');
 const previousButton = document.getElementById('previousButton');
 const nextButton = document.getElementById('nextButton');
 const slidesToShow = 2;
