@@ -14,10 +14,6 @@ body  {
     font-family: 'Capuche', sans-serif;
 }
 
-.titulo {
-    font-family: 'Capuche', sans-serif;
-}
-
 /* Maria: Incorporação da fonte "Capuche", escolhida para títulos do site */
 @font-face {
     font-family: 'Capuche';
@@ -32,6 +28,14 @@ body  {
     src: url('/front/fonts/Moon\ Light.otf') format('opentype');
     font-weight: bold;
     font-style: bold;
+}
+
+.titulo {
+    font-family: 'Capuche', sans-serif;
+}
+
+.texto {
+    font-family: 'Moon', sans-serif;
 }
 
 /* Maria: Personalizando a logo do site */
@@ -105,6 +109,17 @@ body  {
     color: #f2b035;  
  }
 
+/* Maria: TENTATIVA do responsivo do Header, igor tenha piedade */
+@media (max-width: 768px) {
+    .nav {
+        display: none; /* Oculta o menu principal */
+    }
+
+    .caixa-de-busca {
+        max-width: 100%; /* Preenche a largura da tela */
+    }
+}
+
 /*  Maria: Personalizando o ícone do usuário */
 .user-icon {
     cursor: pointer;
@@ -152,10 +167,12 @@ body  {
     height: 95px;
 }
 
+/* Maria: Personalização para o main */
 main {
     background-color: #f6eed8;
 }
 
+/* Maria: Personalização para o footer */
 footer {
     background-color: #d90d43;
     color: #f6eed8;
