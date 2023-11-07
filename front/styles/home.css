@@ -57,7 +57,7 @@ body  {
     margin: 0 20px; /* Ajusta o espaçamento entre as palavras */
 }
 
-.nav a {
+.a {
     color: #f2e0bd; /* Altera a cor das palavras do menu */
     text-decoration: none;
     font-size: 20px;
@@ -94,19 +94,19 @@ body  {
 
 /*Maria: Altera a cor do placeholder*/
 ::-webkit-input-placeholder {
-    color: #f2b035;
+    color: #816024;
  }
  
  :-moz-placeholder { /* Para Firefox 18- */
-    color: #f2b035;  
+    color: #816024;  
  }
  
  ::-moz-placeholder {  /* Para Firefox 19+ */
-    color: #f2b035;  
+    color: #816024;  
  }
  
  :-ms-input-placeholder {  
-    color: #f2b035;  
+    color: #816024;  
  }
 
 /* Maria: TENTATIVA do responsivo do Header, igor tenha piedade */
