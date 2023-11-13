@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Site para gerenciamento de Cronograma Capilar",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon back/index.js"
   },
   "author": "Beleza Em Fases (Lais Higuti, Lie Higuti, Lorrany Boschesi, Luiza Vieira, Maria Eduarda Andrade)",
   "license": "ISC",
