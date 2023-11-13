@@ -13,10 +13,10 @@ export const getUsuarios = (req, res) => {
 }
 
 export const postUsuarios = (req, res) => {
-    const q = "INSERT INTO Usuario(`nome`, `nascimento`, `email`, `senha`) VALUES(?)";
+    const q = "INSERT INTO Usuario(`nome`, `nascimento`, `email`, `senha`) VALUES(?)"; // Maria: Cria um novo usuario
 
-    const values = [
-        req.body.nome,
+    const values = [ // Maria: Valores com os objetos do sistema
+        req.body.nome, // Maria: Requisição com o seu corpo e os objetos
         req.body.nascimento,
         req.body.email,
         req.body.senha
