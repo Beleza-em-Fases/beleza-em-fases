@@ -14,5 +14,3 @@ app.use(express.json())
 app.use("/user", rotasUsuario)
 
 app.listen(8080)
-
-

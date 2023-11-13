@@ -7,4 +7,3 @@ export const db = mysql.createPool ({
     password: "estudante1",
     database: "estudante1"
 })
-
