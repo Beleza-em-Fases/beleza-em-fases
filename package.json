@@ -1,0 +1,17 @@
+{
+  "name": "beleza-em-fases-webapp",
+  "version": "1.0.0",
+  "description": "Site para gerenciamento de Cronograma Capilar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Beleza Em Fases (Lais Higuti, Lie Higuti, Lorrany Boschesi, Luiza Vieira, Maria Eduarda Andrade)",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1",
+    "nodemon": "^3.0.1"
+  }
+}
