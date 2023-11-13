@@ -1,32 +1,14 @@
 import express from "express"
-import { db } from "../db.js";
+import { getUsuarios, postUsuarios, putUsuarios, deleteUsuarios } from "./controladores/usuarioController.js";
 
-const roteador = express.Router(); //Maria: Método de roteamento
+const roteador = express.Router();
 
-roteador.get("/", (req, res)=>{
-   const query = "SELECT * FROM Usuario" //Maria: Tabela Usuario
+roteador.get("/", getUsuarios)
 
-   db.query(query, (erro, resultado)=>{
-      if(erro) return res.json(erro)
-      return res.json(resultado).status(200)
-   })
-})
+roteador.post("/", postUsuarios)
 
-roteador.post("/", (req, res)=>{
-   const query = "INSERT INTO Usuario(`nome`) VALUES(?)"
+roteador.put("/:id", putUsuarios)
 
-   const valores = [
-      req.body.nome
-   ]
-
-   db.query(query, [valores], (erro)=>{
-      if(erro) return res.json(erro)
-      return res.json("Usuario cadastrado").status(200)
-   })
-})
-
-roteador.put("/", (req, res)=>{res.send("Put")})
-
-roteador.delete("/", (req, res)=>{res.send("Delete")})
+roteador.delete("/:id", deleteUsuarios)
 
 export default roteador;
