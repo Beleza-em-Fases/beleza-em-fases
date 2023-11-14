@@ -5,7 +5,7 @@ const roteador = express.Router();
 
 roteador.get("/", getUsuarios)
 
-roteador.post("/", postUsuarios)
+roteador.post("/cadastrar", postUsuarios);
 
 roteador.put("/:id", putUsuarios)
 
