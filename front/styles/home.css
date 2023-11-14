@@ -61,11 +61,12 @@ body  {
     color: #f2e0bd; /* Altera a cor das palavras do menu */
     text-decoration: none;
     font-size: 20px;
-    transition: color 0.3s; /* Adiciona uma transição para a mudança de cor */
+    transition: color 0.3s, font-size 0.3s; /* Adiciona transição para mudança de cor e tamanho da fonte */
 }
 
 .nav a:hover {
     color: #f2b035; /* Altera a cor ao passar o mouse sobre as palavras do menu */
+    font-size: 21.5px; /* Aumenta o tamanho da fonte ao passar o mouse */
 }
 
 /* Maria: Estilos para a barra de pesquisa */
@@ -125,6 +126,11 @@ body  {
     cursor: pointer;
     margin-left: 10px;
     margin-right: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.user-icon:hover {
+    transform: scale(1.1);
 }
 
 .user-icon-container {
