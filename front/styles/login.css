@@ -1,5 +1,5 @@
 body {
-    background: url(/front/images/telas/telaLogin.jpg) no-repeat center center; 
+    background:url(/front/images/telas/telaLogin.jpg) no-repeat center center; 
     background-size: cover;
     height: 800px;
     font-family: 'Capuche', sans-serif;
@@ -12,24 +12,6 @@ h1 {
     margin-right: 50%;
 }
 
-a{
-    color: #F2E0BD;
-}
-
-button {
-    color: #F2E0BD;
-    background: #f2b035;
-    border-radius: 15%;
-    height: 10vh;
-    width: 10vw;
-    font-size: 25px;
-    font-family: 'Capuche', sans-serif;
-    border: none;
-    cursor: pointer;
-    padding: 10px 20px;
-    margin-left: 40%;
-}
-
 /* Incorporação da fonte "Capuche" */
 @font-face {
     font-family: 'Capuche';
@@ -37,4 +19,7 @@ button {
     font-weight: normal;
     font-style: normal;
 }
+
+
+
 

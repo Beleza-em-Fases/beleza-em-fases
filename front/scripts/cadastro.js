@@ -1,3 +1,4 @@
+// Maria, Lie
 document.getElementById("cadastroForm").addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -6,33 +7,26 @@ document.getElementById("cadastroForm").addEventListener("submit", function (eve
     const email = document.getElementById("email").value;
     const senha = document.getElementById("senha").value;
 
-    const formData = {
-        nome: nome,
-        nascimento: nascimento,
-        email: email,
-        senha: senha
-    };
-
-    fetch("http://localhost:8080/usuario/cadastrar", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(formData)
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log(data); // Exibe a resposta no console para fins de depuração
-
-        // Verifique a resposta e exiba uma mensagem adequada no HTML
-        if (data.status === "success") {
-            document.getElementById("mensagem").innerText = "Usuário cadastrado com sucesso!";
-        } else {
-            document.getElementById("mensagem").innerText = "Erro ao cadastrar usuário: " + data.message;
-        }
-    })
-    .catch(error => {
-        console.error("Erro ao cadastrar usuário:", error);
-        document.getElementById("mensagem").innerText = "Erro ao cadastrar usuário. Por favor, tente novamente.";
-    });
+    // Verifica a força da senha
+    if (!verificarSenhaFraca(senha)) {
+      exibirMensagem("A senha é fraca. Escolha uma senha com mais de oito caracteres.");
+      return;
+    }
+    // Redireciona o usuário para outra tela (substitua pelo URL desejado)
+    window.location.href = "login.html";
 });
+
+  // Função para verificar a força da senha (exemplo simples)
+function verificarSenhaFraca(senha) {
+    // Adicione suas regras para determinar a força da senha
+    // Neste exemplo, verificamos se a senha tem pelo menos 8 caracteres
+    return senha.length >= 8;
+}
+
+  // Função para exibir uma mensagem temporária
+function exibirMensagem(mensagem) {
+    document.getElementById("mensagem").innerText = mensagem;
+    setTimeout(function () {
+      document.getElementById("mensagem").innerText = "";
+    }, 5000); // A mensagem será removida após 5 segundos (5000 milissegundos)
+}
