@@ -57,7 +57,7 @@ body  {
     margin: 0 20px; /* Ajusta o espaçamento entre as palavras */
 }
 
-.a {
+.nav li a {
     color: #f2e0bd; /* Altera a cor das palavras do menu */
     text-decoration: none;
     font-size: 20px;
@@ -140,22 +140,31 @@ body  {
 .user-menu {
     position: absolute;
     background-color: #f2e0bd;
-    color: #f2b035;
     list-style: none;
     padding: 10px;
     display: none;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 196, 0, 0.2);
-    z-index: 1;
     text-align: center;
     top: 100%;
     right: 0;
     width: 250px;
+    z-index: 2;
+    margin-right: 20px;
 }
 
 .user-menu li {
     margin: 10px 0;
-    text-decoration: none; /* Remove o sublinhado dos textos do menu */
+}
+
+.user-menu li a {
+    text-decoration: none; /* Maria: Remove o sublinhado dos textos do menu */
+    color: #f2b035;
+    transition: color 0.3s; /* Adiciona uma transição para a mudança de cor */
+}
+
+.user-menu li a:hover {
+    color: #d90d43; /* Altera a cor ao passar o mouse sobre as palavras */
 }
 
 .user-menu li.separator {
@@ -250,6 +259,10 @@ footer {
     border-radius: 50%;
     border: solid #f2b035;
     background: #f2b035; /* Adiciona a cor de fundo */
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #f2b035 !important;
 }
 
 .container-dicas {
