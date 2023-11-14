@@ -1,0 +1,32 @@
+// Maria, Lie
+document.getElementById("cadastroForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const nome = document.getElementById("nome").value;
+    const nascimento = document.getElementById("data").value;
+    const email = document.getElementById("email").value;
+    const senha = document.getElementById("senha").value;
+
+    // Verifica a força da senha
+    if (!verificarSenhaFraca(senha)) {
+      exibirMensagem("A senha é fraca. Escolha uma senha com mais de oito caracteres.");
+      return;
+    }
+    // Redireciona o usuário para outra tela (substitua pelo URL desejado)
+    window.location.href = "login.html";
+});
+
+  // Função para verificar a força da senha (exemplo simples)
+function verificarSenhaFraca(senha) {
+    // Adicione suas regras para determinar a força da senha
+    // Neste exemplo, verificamos se a senha tem pelo menos 8 caracteres
+    return senha.length >= 8;
+}
+
+  // Função para exibir uma mensagem temporária
+function exibirMensagem(mensagem) {
+    document.getElementById("mensagem").innerText = mensagem;
+    setTimeout(function () {
+      document.getElementById("mensagem").innerText = "";
+    }, 5000); // A mensagem será removida após 5 segundos (5000 milissegundos)
+}
