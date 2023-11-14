@@ -1,3 +1,4 @@
+/*Lie, Lorrany*/
 body {
     background:url(/front/images/telas/telaLogin.jpg) no-repeat center center; 
     background-size: cover;
@@ -20,6 +21,38 @@ h1 {
     font-style: normal;
 }
 
+label {
+    font-family: 'Capuche', sans-serif;
+    color: #790927;
+}
 
+input {
+    font-family: 'Moon', sans-serif;
+    color: #790927;
+    width: 17vw;
+    height: 3vh;
+}
 
+.botao {
+    color: #f5ead5;
+    background: #f2b035;
+    border-radius: 15px;
+    height: 10vh; width: 10vw;
+    font-size: 25px;
+    font-family: 'Capuche', sans-serif;
+    border: none;
+    cursor: pointer;
+    padding: 20px 20px;
+    margin-left: 20%;
+    text-decoration: none;
+    text-align: center;
+}
 
+.p1 {
+    text-align: center;
+    color: #790927;
+}
+
+.p2 {
+    color: #790927;
+}
