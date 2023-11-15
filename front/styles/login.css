@@ -4,7 +4,7 @@ body {
     background-size: cover;
     height: 800px;
     font-family: 'Capuche', sans-serif;
-}
+} 
 
 h1 {
     color: #f2b035;
@@ -24,22 +24,29 @@ h1 {
 label {
     font-family: 'Capuche', sans-serif;
     color: #790927;
+    margin-left: 10%;
+    font-size: 35px;
 }
 
 input {
     font-family: 'Moon', sans-serif;
+    width: 44vw;
+    height: 4vh;
+    border-radius: 20px;
+    margin-left: 10%;
     color: #790927;
-    width: 17vw;
-    height: 3vh;
+    border: solid #f2b035;
+    background-color: #F2E0BD;
 }
 
 .botao {
-    color: #f5ead5;
-    background: #f2b035;
-    border-radius: 15px;
-    height: 10vh; width: 10vw;
-    font-size: 25px;
     font-family: 'Capuche', sans-serif;
+    background: #f2b035;
+    color: #f5ead5;
+    border-radius: 20px;
+    height: 10vh; 
+    width: 13vw;
+    font-size: 30px;
     border: none;
     cursor: pointer;
     padding: 20px 20px;
@@ -49,10 +56,26 @@ input {
 }
 
 .p1 {
-    text-align: center;
     color: #790927;
+    font-size: 22px;
+    text-align: center;
 }
 
 .p2 {
     color: #790927;
+    margin-left: 15%;
+    font-size: 23px;
 }
+
+.user-icon {
+    margin-left: 130px;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+    top: 15vh;
+    left: 30vw;
+}
+
+/*Responsivo*/
