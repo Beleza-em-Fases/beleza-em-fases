@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/front/images/favicon.svg" type="image/png">
     <link rel="stylesheet" href="/front/styles/login.css">
     <title>Login</title>
 </head>
 <!-- Lie, Lorrany -->
-<body>
+<body> 
     <header>
+        <div class="user-icon" id="userIcon">
+            <img class="icon" src="/front/images/icone2-SemFundo.jpg" alt="Ícone de Usuário">
+        </div>
         <h1> LOGIN </h1>
         <form class="formLogin">
             <div>
-                <label for="email"> Email ou User </label>
+                <label for="email"> Email </label>
                 <br>
                 <input type="email" id="email" name="email" required/>
                 <br>
@@ -21,8 +25,6 @@
                 <label for="senha"> Senha </label>
                 <br>
                 <input type="password" id="senha" name="senha" required/>
-                <br>
-                <br>
                 <p class="p1"> Esqueceu sua senha? </p>
                 <p class="p2"> Já é cadastrado? Cadastra-se </p>
                 <button class="botao"> Entrar </button>
