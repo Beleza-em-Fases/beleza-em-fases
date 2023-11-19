@@ -105,24 +105,28 @@ body  {
 }
 
 
-.submenu:hover .submenu-options,
-.submenu-options:hover .submenu-options-inner {
+.display-active{
     display: flex;
 }
 
+/*         .submenu:hover .submenu-options,
+.submenu-options:hover .submenu-options-inner {
+    display: flex;
+} Maria: nfelizmente não da pra ser bonito e funcional :(*/ 
+
 .submenu-options a,
 .submenu-options-inner a {
-    color: #f2b035 !important;
+    color: #f2b035;
     text-decoration: none;
     padding: 10px;
     transition: color 0.3s, font-size 0.3s;
 }
 
-.submenu-options a:hover,
+/*        .submenu-options a:hover,
 .submenu-options-inner a:hover {
-    color: #d90d43 !important; /* Mudança de cor ao passar o mouse */
+    color: #d90d43 !important;
     font-size: 21px;
-}
+} */
 
 /* Maria: Estilos para a barra de pesquisa */
 .caixa-de-busca {

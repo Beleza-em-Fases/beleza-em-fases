@@ -10,6 +10,30 @@ userIcon.addEventListener('click', function () {
     }
 });
 
+const submenus = document.querySelectorAll(".submenu");
+
+        submenus.forEach(element => {
+            element.addEventListener("mouseover", () => {
+                element.querySelector(".submenu-options").classList.add("display-active");
+            })
+
+            element.addEventListener("mouseout", () => {
+                element.querySelector(".submenu-options").classList.remove("display-active");
+            })
+        });
+
+        const submenuOptions = document.querySelectorAll(".submenu-option");
+
+        submenuOptions.forEach(element => {
+            element.addEventListener("mouseover", () => {
+                element.querySelector(".submenu-options-inner").classList.add("display-active");
+            })
+
+            element.addEventListener("mouseout", () => {
+                element.querySelector(".submenu-options-inner").classList.remove("display-active");
+            })
+        });
+
 //Lógica dos botões - slide (Luiza)
 let slideIndex = 0;
 const slides = document.querySelectorAll('.grid-item-dicas');
