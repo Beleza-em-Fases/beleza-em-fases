@@ -5,7 +5,7 @@ CREATE TABLE Usuario(
 id INT PRIMARY KEY AUTO_INCREMENT,
 nome VARCHAR(255) NOT NULL,
 nascimento DATE NOT NULL,
-email VARCHAR(255) NOT NULL,
+email VARCHAR(255) UNIQUE NOT NULL,
 senha VARCHAR(255) NOT NULL,
 fotoPerfil VARCHAR(255)
 );
@@ -30,7 +30,7 @@ id_usuario INT NOT NULL,
 condicao VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE Cronograma(
+CREATE TABLE Cabelo(
 id INT PRIMARY KEY AUTO_INCREMENT,
 id_usuario INT NOT NULL,
 id_tipo INT NOT NULL,
@@ -45,6 +45,14 @@ FOREIGN KEY (id_usuario) REFERENCES Usuario(id),
 FOREIGN KEY (id_tipo) REFERENCES Tipo_Cabelo(id),
 FOREIGN KEY (id_dano) REFERENCES Dano_Quimico(id),
 FOREIGN KEY (id_condicao) REFERENCES Condicao(id)
+);
+
+CREATE TABLE Cronograma(
+id INT PRIMARY KEY AUTO_INCREMENT,
+id_usuario INT NOT NULL,
+id_cabelo INT NOT NULL,
+FOREIGN KEY (id_usuario) REFERENCES Usuario(id),
+FOREIGN KEY (id_cabelo) REFERENCES Cabelo(id)
 );
 
 CREATE TABLE Evolucao(
@@ -65,4 +73,14 @@ publicacao DATE NOT NULL,
 comentario VARCHAR(255) NOT NULL,
 publicado BOOLEAN NOT NULL,
 FOREIGN KEY (id_usuario) REFERENCES Usuario(id)
+);
+
+CREATE TABLE Produtos(
+id INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(255) NOT NULL,
+marca VARCHAR(255) NOT NULL,
+descricao VARCHAR(255) NOT NULL,
+funcao VARCHAR(255) NOT NULL,
+preco DECIMAL(10, 2),
+imagem VARCHAR(255) NOT NULL
 );

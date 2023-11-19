@@ -57,16 +57,71 @@ body  {
     margin: 0 20px; /* Ajusta o espaçamento entre as palavras */
 }
 
-.nav li a {
+.menu-words {
     color: #f2e0bd; /* Altera a cor das palavras do menu */
     text-decoration: none;
     font-size: 20px;
     transition: color 0.3s, font-size 0.3s; /* Adiciona transição para mudança de cor e tamanho da fonte */
 }
 
-.nav a:hover {
+.menu-words:hover {
     color: #f2b035; /* Altera a cor ao passar o mouse sobre as palavras do menu */
     font-size: 21.5px; /* Aumenta o tamanho da fonte ao passar o mouse */
+}
+
+.submenu {
+    position: relative;
+    color: #f2b035;
+}
+
+.submenu-options {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    background-color: #f2e0bd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    text-decoration: none;
+    font-size: 19.5px;
+    width: 260px;
+    list-style: none; /* Remove a bolinha da lista */
+}
+
+.submenu-options-inner {
+    display: none;
+    flex-direction: column;
+    background-color: #f2e0bd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 2;
+    text-decoration: none;
+    font-size: 19.5px;
+    width: 280px;
+    list-style: none; /* Remove a bolinha da lista */
+}
+
+
+.submenu:hover .submenu-options,
+.submenu-options:hover .submenu-options-inner {
+    display: flex;
+}
+
+.submenu-options a,
+.submenu-options-inner a {
+    color: #f2b035 !important;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s, font-size 0.3s;
+}
+
+.submenu-options a:hover,
+.submenu-options-inner a:hover {
+    color: #d90d43 !important; /* Mudança de cor ao passar o mouse */
+    font-size: 21px;
 }
 
 /* Maria: Estilos para a barra de pesquisa */
