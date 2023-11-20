@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="icon" href="/front/images/favicon.svg" type="image/png">
+    <link rel="stylesheet" href="/front/styles/contato.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" rel="stylesheet">
+    <!--Maria: Essa referência é para conseguirmos utilizar os recursos do Framework Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--a-->
+    <!--Maria: Esse script é para conseguirmos utilizar os recursos do Framework Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header> <!--Maria: HTML e CSS do Header feito por mim-->
+        <div class="header">
+            <div>
+                <a href="home.html">
+                    <img class="logo" src="/front/images/logo.png" alt="Logo do Site">
+                </a>
+            </div>
+            <!--Maria: Barra de navegação do site-->
+            <ul class="nav">
+                <li class="submenu" id="produtos-menu">
+                    <a class="menu-words" href="produtos.html">Produtos</a>
+                    <ul class="submenu-options">
+                        <li class="submenu-option">
+                            <a href="#">Passos da rotina</a>
+                            <ul class="submenu-options-inner">
+                                <li><a href="#">Pré-Shampoo</a></li>
+                                <li><a href="#">Hidratação</a></li>
+                                <li><a href="#">Nutrição</a></li>
+                                <li><a href="#">Reconstrução</a></li>
+                                <li><a href="#">Acidificação</a></li>
+                                <li><a href="#">Umectação</a></li>
+                                <li><a href="#">Tratamento Noturno</a></li>
+                                <li><a href="#">Protetor Térmico</a></li>
+                                <li><a href="#">Finalizadores</a></li>
+                                <li><a href="#">Óleos</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu-option">
+                            <a href="#">Indicações</a>
+                            <ul class="submenu-options-inner">
+                                <li><a href="#">Couro Cabeludo</a></li>
+                                <li><a href="#">Cabelo Seco</a></li>
+                                <li><a href="#">Cabelo Sem Brilho</a></li>
+                                <li><a href="#">Cabelo Quebradiço</a></li>
+                                <li><a href="#">Coloridos</a></li>
+                                <li><a href="#">Loiros</a></li>
+                                <li><a href="#">Com Progressiva</a></li>
+                                <li><a href="#">Muito Frizz</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu-option">
+                            <a href="#">Curvatura</a>
+                            <ul class="submenu-options-inner">
+                                <li><a href="#">Cabelo Liso</a></li>
+                                <li><a href="#">Cabelo Ondulado</a></li>
+                                <li><a href="#">Cabelo Cacheado</a></li>
+                                <li><a href="#">Cabelo Crespo</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu-option">
+                            <a href="#">Coloração</a>
+                            <ul class="submenu-options-inner">
+                                <li><a href="#">Tonalizante</a></li>
+                                <li><a href="#">Tinta Capilar</a></li>
+                                <li><a href="#">Oxidante</a></li>
+                                <li><a href="#">Descolorante</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Ver Tudo</a></li>
+                    </ul>
+                </li>
+                <li><a class="menu-words" href="forum.html">Forum</a></li>
+                <li><a class="menu-words" href="quiz.html">Quiz</a></li>
+                <li><a class="menu-words" href="glossario.html">Glossário</a></li>
+            </ul>
+            <!--Maria:Caixa de pesquisa, ainda não está funcional por exigir o SQL-->
+            <div class="caixa-de-busca">
+                <i class="fas fa-search lupa"></i>
+                <span class="texto-buscar"></span>
+                <input name="buscar" type="text" class="campo-de-busca" placeholder="Buscar"
+                    onkeydown="enviarBusca(event)">
+            </div>
+            <!--Maria: Icone do usuário -->
+            <div class="user-icon-container">
+                <div class="user-icon" id="userIcon">
+                    <img class="icon" src="/front/images/icone2.jpg" alt="Ícone de Usuário">
+                </div>
+                <!--Maria: Menu do usuário ao clicar no ícone-->
+                <ul class="user-menu" id="userMenu">
+                    <li><a href="perfil.html">Perfil</a></li>
+                    <li><a href="cronograma.html">Cronograma</a></li>
+                    <li><a href="configuracoes.html">Configurações</a></li>
+                    <li class="separator"></li>
+                    <li><a href="sair.html">Sair</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!--Maria: As div abaixo representam os detalhes das linhas abaixo do header, não possui funcionalidades nem conteúdo, apenas para fins estéticos do site-->
+    <div class="line-one"></div>
+    <div class="line-two"></div>
+    <div class="line-three"></div>
+    <div class="line-four"></div>
+
+    <main>
+        <div class="flex-item">
+            <p class="title-grid-flex titulo">Perguntas Frequentes</p>
+            <div class="slider-container">
+                <div class="grid-controls">
+                    <button class="slider-buttons-perguntas" id="previousButton" onclick="previousSlide()">&lt;</button>
+                    <div class="grid-container">
+                        <div class="grid-item-perguntas">
+                            <p class="titulo-pergunta">Pergunta 1</p>
+                            <p class="texto-perguntas">Resposta 1</p>
+                        </div>
+                        <div class="grid-item-perguntas">
+                            <p class="titulo-pergunta">Pergunta 2</p>
+                            <p class="texto-perguntas">Resposta 2</p>
+                        </div>
+                        <div class="grid-item-perguntas">
+                            <p class="titulo-pergunta">Pergunta 3</p>
+                            <p class="texto-perguntas">Resposta 3</p>
+                        </div>
+                        <div class="grid-item-perguntas">
+                            <p class="titulo-pergunta">Pergunta 4</p>
+                            <p class="texto-perguntas">Resposta 4</p>
+                        </div>
+                        <div class="grid-item-perguntas">
+                            <p class="titulo-pergunta">Pergunta 5</p>
+                            <p class="texto-perguntas">Resposta 5</p>
+                        </div>
+                        <div class="grid-item-perguntas">
+                            <p class="titulo-pergunta">Pergunta 6</p>
+                            <p class="texto-perguntas">Resposta 6</p>
+                        </div>
+                        <div class="grid-item-perguntas">
+                            <p class="titulo-pergunta">Pergunta 7</p>
+                            <p class="texto-perguntas">Resposta 7</p>
+                        </div>
+                        <div class="grid-item-perguntas">
+                            <p class="titulo-pergunta">Pergunta 8</p>
+                            <p class="texto-perguntas">Resposta 8</p>
+                        </div>
+                        <div class="grid-item-perguntas">
+                            <p class="titulo-pergunta">Pergunta 9</p>
+                            <p class="texto-perguntas">Resposta 9</p>
+                        </div>
+                        <div class="grid-item-perguntas">
+                            <p class="titulo-pergunta">Pergunta 10</p>
+                            <p class="texto-perguntas">Resposta 10</p>
+                        </div>
+                        <div class="grid-item-perguntas">
+                            <p class="titulo-pergunta">Pergunta 11</p>
+                            <p class="texto-perguntas">Resposta 11</p>
+                        </div>
+                        <div class="grid-item-perguntas">
+                            <p class="titulo-pergunta">Pergunta 12</p>
+                            <p class="texto-perguntas">Resposta 12</p>
+                        </div>
+                    </div>
+                    <button class="slider-buttons-perguntas" id="nextButton" onclick="nextSlide()">&gt;</button>
+                </div>
+            </div>
+            <br><br>
+        </div>
+        <div class="flex-item">
+            <p class="title-grid-flex titulo">Entre em contato</p>
+            <section>
+                <form id="mensagemForm">
+                    <div>
+                        <label for="nome"> Nome Completo </label>
+                        <br>
+                        <input class="input-form" type="text" id="nome" name="nome" required />
+                        <br>
+                        <br>
+
+                        <label for="email"> E-mail </label>
+                        <br>
+                        <input class="input-form" type="email" id="email" name="email" required />
+                        <br>
+                        <br>
+
+                        <label for="msg"> Mensagem </label>
+                        <br>
+                        <textarea id="msg" name="msg" required></textarea>
+                        <p id="mensagem" class="erro"></p>
+                    </div>
+                    <br>
+                    <br>
+                    <button class="button">ENVIAR</button>
+                    <br>
+                    <br>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <div class="fline-four"></div>
+    <div class="line-three"></div>
+    <div class="line-two"></div>
+    <div class="fline-one"></div>
+
+    <!--Maria: HTML e CSS do Footer feito por mim com modelo do Bootstrap-->
+    <footer class="py-3">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="/front/pages/home.html" class="menu-words px-2">Home</a></li>
+            <li class="nav-item"><a href="#" class="menu-words px-2">Privacidade</a></li>
+            <li class="nav-item"><a href="#" class="menu-words px-2">Contato</a></li>
+            <li class="nav-item"><a href="#" class="menu-words px-2">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="menu-words px-2">Sobre Nós</a></li>
+        </ul>
+        <p class="text-center texto">&copy; Beleza Em Fases, Inc</p>
+    </footer>
+    <script src="/front/scripts/contato.js"></script>
+</body>
+
+</html>
