@@ -40,7 +40,7 @@ const slides = document.querySelectorAll('.grid-item-dicas');
 const slides1 = document.querySelectorAll('.grid-item-indicacao');
 const previousButton = document.getElementById('previousButton');
 const nextButton = document.getElementById('nextButton');
-const slidesToShow = 2;
+const slidesToShow = 4;
 
 function showSlides() {
     slides.forEach(slide => {
@@ -55,8 +55,8 @@ function showSlides() {
         slideIndex = 0;
     }
 
-    if (slideIndex >= slides.length - 2) {
-        slideIndex = slides.length - 2;
+    if (slideIndex >= slides.length - 4) {
+        slideIndex = slides.length - 4;
         nextButton.style.visibility = 'hidden';
     } else {
         nextButton.style.visibility = 'visible';

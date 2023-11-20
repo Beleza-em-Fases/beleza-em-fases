@@ -22,20 +22,32 @@ body  {
     font-style: normal;
 }
 
-/* Maria: Incorporação da fonte "Moon", escolhida para textos do site */
+/* Maria: Incorporação da fonte "Starborn", escolhida para títulos do site */
 @font-face {
-    font-family: 'Moon';
-    src: url('/front/fonts/Moon\ Light.otf') format('opentype');
-    font-weight: bold;
-    font-style: bold;
+    font-family: 'Starborn';
+    src: url('/front/fonts/Starborn.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Maria: Incorporação da fonte "Chicago Darling", escolhida para textos do site */
+@font-face {
+    font-family: 'LemonMilk';
+    src: url('/front/fonts/LEMONMILK-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 .titulo {
     font-family: 'Capuche', sans-serif;
 }
 
+.titulo2 {
+    font-family: 'Starborn', sans-serif;
+}
+
 .texto {
-    font-family: 'Moon', sans-serif;
+    font-family: 'LemonMilk', sans-serif;
 }
 
 /* Maria: Personalizando a logo do site */
@@ -104,15 +116,9 @@ body  {
     list-style: none; /* Remove a bolinha da lista */
 }
 
-
 .display-active{
     display: flex;
 }
-
-/*         .submenu:hover .submenu-options,
-.submenu-options:hover .submenu-options-inner {
-    display: flex;
-} Maria: nfelizmente não da pra ser bonito e funcional :(*/ 
 
 .submenu-options a,
 .submenu-options-inner a {
@@ -121,12 +127,6 @@ body  {
     padding: 10px;
     transition: color 0.3s, font-size 0.3s;
 }
-
-/*        .submenu-options a:hover,
-.submenu-options-inner a:hover {
-    color: #d90d43 !important;
-    font-size: 21px;
-} */
 
 /* Maria: Estilos para a barra de pesquisa */
 .caixa-de-busca {
@@ -343,7 +343,7 @@ footer {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(5, 3fr);
     grid-gap: 0.5vw;
     justify-items: center;
     width: 45vw;
@@ -406,7 +406,7 @@ footer {
 
 .slider-container {
     display: flex;
-    justify-content: center;
+    padding: 30px;
 }
 
 .slider-buttons-dicas {
