@@ -1,5 +1,5 @@
 /*Maria: Feito com o intuito de deixar o site rente as bordas do navegador*/
-body  {
+body {
     margin: 0px;
 }
 
@@ -62,23 +62,29 @@ body  {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Centraliza as palavras do menu */
+    justify-content: center;
+    /* Centraliza as palavras do menu */
 }
 
 .nav li {
-    margin: 0 20px; /* Ajusta o espaçamento entre as palavras */
+    margin: 0 20px;
+    /* Ajusta o espaçamento entre as palavras */
 }
 
 .menu-words {
-    color: #f2e0bd; /* Altera a cor das palavras do menu */
+    color: #f2e0bd;
+    /* Altera a cor das palavras do menu */
     text-decoration: none;
     font-size: 20px;
-    transition: color 0.3s, font-size 0.3s; /* Adiciona transição para mudança de cor e tamanho da fonte */
+    transition: color 0.3s, font-size 0.3s;
+    /* Adiciona transição para mudança de cor e tamanho da fonte */
 }
 
 .menu-words:hover {
-    color: #f2b035; /* Altera a cor ao passar o mouse sobre as palavras do menu */
-    font-size: 21.5px; /* Aumenta o tamanho da fonte ao passar o mouse */
+    color: #f2b035;
+    /* Altera a cor ao passar o mouse sobre as palavras do menu */
+    font-size: 21.5px;
+    /* Aumenta o tamanho da fonte ao passar o mouse */
 }
 
 .submenu {
@@ -97,7 +103,8 @@ body  {
     text-decoration: none;
     font-size: 19.5px;
     width: 260px;
-    list-style: none; /* Remove a bolinha da lista */
+    list-style: none;
+    /* Remove a bolinha da lista */
 }
 
 .submenu-options-inner {
@@ -113,10 +120,11 @@ body  {
     text-decoration: none;
     font-size: 19.5px;
     width: 280px;
-    list-style: none; /* Remove a bolinha da lista */
+    list-style: none;
+    /* Remove a bolinha da lista */
 }
 
-.display-active{
+.display-active {
     display: flex;
 }
 
@@ -142,7 +150,8 @@ body  {
 
 .lupa {
     margin-right: 5px;
-    color: #4B3C2F; /* Defina a cor do ícone da lupa */
+    color: #4B3C2F;
+    /* Defina a cor do ícone da lupa */
 }
 
 .campo-de-busca {
@@ -155,28 +164,32 @@ body  {
 /*Maria: Altera a cor do placeholder*/
 ::-webkit-input-placeholder {
     color: #816024;
- }
- 
- :-moz-placeholder { /* Para Firefox 18- */
-    color: #816024;  
- }
- 
- ::-moz-placeholder {  /* Para Firefox 19+ */
-    color: #816024;  
- }
- 
- :-ms-input-placeholder {  
-    color: #816024;  
- }
+}
+
+:-moz-placeholder {
+    /* Para Firefox 18- */
+    color: #816024;
+}
+
+::-moz-placeholder {
+    /* Para Firefox 19+ */
+    color: #816024;
+}
+
+:-ms-input-placeholder {
+    color: #816024;
+}
 
 /* Maria: TENTATIVA do responsivo do Header, igor tenha piedade */
 @media (max-width: 768px) {
     .nav {
-        display: none; /* Oculta o menu principal */
+        display: none;
+        /* Oculta o menu principal */
     }
 
     .caixa-de-busca {
-        max-width: 100%; /* Preenche a largura da tela */
+        max-width: 100%;
+        /* Preenche a largura da tela */
     }
 }
 
@@ -223,13 +236,16 @@ body  {
 }
 
 .user-menu li a {
-    text-decoration: none; /* Maria: Remove o sublinhado dos textos do menu */
+    text-decoration: none;
+    /* Maria: Remove o sublinhado dos textos do menu */
     color: #f2b035;
-    transition: color 0.3s; /* Adiciona uma transição para a mudança de cor */
+    transition: color 0.3s;
+    /* Adiciona uma transição para a mudança de cor */
 }
 
 .user-menu li a:hover {
-    color: #d90d43; /* Altera a cor ao passar o mouse sobre as palavras */
+    color: #d90d43;
+    /* Altera a cor ao passar o mouse sobre as palavras */
 }
 
 .user-menu li.separator {
@@ -289,15 +305,17 @@ footer {
 }
 
 /*Laís/Lie: ajusto os botões no tamanho que eu quero */
-.carousel-control-prev, .carousel-control-next{
+.carousel-control-prev,
+.carousel-control-next {
     width: 100px;
     height: 450px;
     position: relative;
     background: none !important;
- }
- 
- /*Laís/Lie: crio as setas e centralizo */
- .carousel-control-prev::after, .carousel-control-next::after {
+}
+
+/*Laís/Lie: crio as setas e centralizo */
+.carousel-control-prev::after,
+.carousel-control-next::after {
     content: "";
     width: 18px;
     height: 18px;
@@ -305,17 +323,17 @@ footer {
     transform: rotate(135deg);
     border: solid #f2b035;
     border-width: 0 6px 6px 0;
-    top: 50%; 
+    top: 50%;
     left: 50%;
     margin-top: -9px;
     margin-left: -4px;
- }
- 
- /*Laís/Lie: ajusto a seta next */
- .carousel-control-next::after {
+}
+
+/*Laís/Lie: ajusto a seta next */
+.carousel-control-next::after {
     transform: rotate(-45deg);
     margin-left: -14px;
- }
+}
 
 /*Laís: Esta classe serve para deixar os bottuns que indicam o carrossel em forma de rádio*/
 .carousel-indicators button {
@@ -323,7 +341,8 @@ footer {
     height: 10px !important;
     border-radius: 50%;
     border: solid #f2b035;
-    background: #f2b035; /* Adiciona a cor de fundo */
+    background: #f2b035;
+    /* Adiciona a cor de fundo */
 }
 
 .carousel-indicators [data-bs-target] {
@@ -346,7 +365,7 @@ footer {
     grid-template-columns: repeat(5, 3fr);
     grid-gap: 0.5vw;
     justify-items: center;
-    width: 45vw;
+    width: 90vw;
 }
 
 .grid-item-dicas {
@@ -358,7 +377,7 @@ footer {
     border-radius: 10%;
     height: 36vh;
     width: 17vw;
-    font-size: 20px;
+    font-size: medium;
     font-weight: 500;
     color: #700927;
     font-family: 'Moon Light', sans-serif;
@@ -375,7 +394,7 @@ footer {
     font-size: 10px;
     color: #f2b035;
     align-items: left;
-} 
+}
 
 .grid-controls-indicacao {
     display: flex;
