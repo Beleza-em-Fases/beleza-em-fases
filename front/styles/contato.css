@@ -7,7 +7,7 @@ body {
 .header {
     background-color: #d90d43;
     color: #f2e0bd;
-    padding: 10px 0;
+    padding: 10px 0; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -408,7 +408,7 @@ main {
     text-align: center;
     align-items: center;
     border-radius: 10%;
-    height: 36vh;
+    height: 40vh;
     width: 22vw;
     font-size: 20px;
     font-weight: 500;
