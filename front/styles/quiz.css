@@ -1,6 +1,8 @@
 /*Maria: Feito com o intuito de deixar o site rente as bordas do navegador*/
 body {
-    margin: 0px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 /* Maria: Personalização para a header */
