@@ -1,124 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <!-- Inclua o link para a biblioteca do FontAwesome no cabeçalho -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronograma</title>
+    <link rel="icon" href="/front/images/favicon.svg" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-    <style>
-        /* Estilos para o cabeçalho */
-        .header {
-            background-color: #d90d43;
-            color: #f2e0bd;
-            padding: 10px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-family: 'Capuche', sans-serif;
-        }
-
-        /* Incorporação da fonte "Capuche" */
-        @font-face {
-            font-family: 'Capuche';
-            src: url('/front/fonts/Capuche Trial.otf') format('opentype');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        /* Estilos para a logo */
-        .logo {
-            margin-left: 20px;
-        }
-
-        /* Estilos para os links de navegação */
-        .nav {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center; /* Centralize as palavras do menu */
-        }
-
-        .nav li {
-            margin: 0 20px; /* Aumente ou diminua o valor para ajustar o espaçamento entre as palavras */
-        }
-
-        .nav a {
-            color: #f2e0bd; /* Altere a cor das palavras do menu */
-            text-decoration: none;
-            font-size: 20px;
-        }
-
-        /* Estilos para a barra de pesquisa */
-        .caixa-de-busca {
-            display: flex;
-            align-items: center;
-            background-color: #f7f3eb; /* Altere a cor da caixa de busca para #f7f3eb */
-            border-radius: 5px;
-            padding: 5px;
-            width: 35%;
-            margin: 0 auto;
-        }
-
-        .lupa {
-            margin-right: 5px;
-            color: #4B3C2F; /* Defina a cor do ícone da lupa */
-        }
-
-        .campo-de-busca {
-            border: none;
-            outline: none;
-            background-color: transparent;
-            flex-grow: 1;
-        }
-
-        /* Estilos para o ícone do usuário */
-        .user-icon {
-            cursor: pointer;
-            margin-left: 10px; /* Ajuste a margem esquerda para mover o ícone para a esquerda */
-        }
-
-        .user-icon-container {
-            position: relative;
-        }
-
-        .icon {
-            width: 60px;
-            height: 60px;
-        }
-
-        /* Estilos para o menu de usuário */
-        .user-menu {
-            position: absolute;
-            background-color: #f2e0bd;
-            color: #f2b035;
-            list-style: none;
-            padding: 10px;
-            display: none;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 196, 0, 0.2);
-            z-index: 1;
-            text-align: center;
-            top: 100%;
-            right: 0;
-        }
-
-        .user-menu li {
-            margin: 10px 0;
-            text-decoration: none; /* Remova o sublinhado dos textos do menu */
-        }
-
-        .user-menu li.separator {
-            border-top: 0.9px solid #f2b035;
-        }
-
-        .logo {
-            width: 130px;
-            height: 95px;
-        }
-        
-    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" rel="stylesheet">  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/front/styles/cronograma.css">
 </head>
 <body>
+    <!-- Lorrany / Maria -->
     <div class="header">
         <div>
             <a href="home.html">
@@ -141,26 +35,53 @@
                 <img class="icon" src="/front/images/icone2.jpg" alt="Ícone de Usuário">
             </div>
             <ul class="user-menu" id="userMenu">
-                <li><a href="perfil.html" style="color: #f2b035;">Perfil</a></li>
-                <li><a href="cronograma.html" style="color: #f2b035;">Cronograma</a></li>
-                <li><a href="configuracoes.html" style="color: #f2b035;">Configurações</a></li>
+                <li><a href="perfil.html" style="color: #f2b035;"> Perfil </a></li>
+                <li><a href="cronograma.html" style="color: #f2b035;"> Cronograma </a></li>
+                <li><a href="configuracoes.html" style="color: #f2b035;"> Configurações </a></li>
                 <li class="separator"></li>
-                <li><a href="sair.html" style="color: #f2b035;">Sair</a></li>
+                <li><a href="sair.html" style="color: #f2b035;"> Sair </a></li>
             </ul>
         </div>
     </div>
-    <script>
-        // JavaScript para mostrar/ocultar o menu de usuário
-        const userIcon = document.getElementById('userIcon');
-        const userMenu = document.getElementById('userMenu');
-
-        userIcon.addEventListener('click', function () {
-            if (userMenu.style.display === 'block') {
-                userMenu.style.display = 'none';
-            } else {
-                userMenu.style.display = 'block';
-            }
-        });
-    </script>
 </body>
+
+<div class="line-one"></div>
+<div class="line-two"></div>
+<div class="line-three"></div>
+<div class="line-four"></div>
+
+<main>
+    <div class="rotina-inicio">
+        <p class="titulo"> Rotina para cabelos DANIFICADOS e PONTAS SECAS </p>
+        <p class="texto"> O cabelo danificado com pontas secas é resultado de práticas prejudiciais como o uso excessivo de calor e tratamentos químicos, exposiçãp ambiental e falta de hidratação.
+            Causando as cutículas capilares a se danificarem, levando à perda de umidade e extremidades ressecadas.
+            O tratamento envolve corte regular das pontas, hidratação profunda com máscaras capilares, redução do calor excessivo, condicionamento adequado, proteção solar e uma dieta equilibrada. A consistência nesses cuidados é essencial para restaurar a saúde e prevenir danos futuros.
+        </p>
+    </div>
+    <p class="text"> Veja o cronograma que desenvolvemos para você seguir durante a semana</p>
+    <div class="grid-container-semana"><p> Dom </p></div>
+    <div class="grid-container-semana"><p> Seg </p></div>
+    <div class="grid-container-semana"><p> Ter </p></div>
+    <div class="grid-container-semana"><p> Qua </p></div>
+    <div class="grid-container-semana"><p> Qui </p></div>
+    <div class="grid-container-semana"><p> Sex </p></div>
+    <div class="grid-container-semana"><p> Sáb </p></div>
+</main>
+
+<div class="fline-four"></div>
+<div class="line-three"></div>
+<div class="line-two"></div>
+<div class="fline-one"></div>
+
+<footer class="footer">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="/front/pages/home.html" class="menu-words px-2">Home</a></li>
+      <li class="nav-item"><a href="#" class="menu-words px-2">Privacidade</a></li>
+      <li class="nav-item"><a href="/front/pages/contato.html" class="menu-words px-2">Contato</a></li>
+      <li class="nav-item"><a href="#" class="menu-words px-2">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="menu-words px-2">Sobre Nós</a></li>
+    </ul>
+    <p class="titulo-footer">&copy; Beleza Em Fases, Inc</p>
+</footer>
+  <script src="/front/scripts/cronograma.js"></script>
 </html>
