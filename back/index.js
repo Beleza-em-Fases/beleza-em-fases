@@ -13,6 +13,7 @@ app.use(cors())
 app.use("/usuario", rotasUsuario) //Maria: Usa a rota /usuario
 app.use("/forum", rotasForum) //Maria: Usa a rota /forum
 app.use("/produtos", rotasProdutos) //Maria: Usa a rota /produtos
+app.use("/produtos/glossario", rotasProdutos) //Maria: Usa a rota /produtos/glossario
 app.use("/quiz", rotasQuiz) //Maria: Usa a rota /quiz
 
 const port = 3030
