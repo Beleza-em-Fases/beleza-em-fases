@@ -1,0 +1,190 @@
+/* Lorrany - Maria */
+
+/* Estilos para o cabeçalho */
+.header {
+    background-color: #d90d43;
+    color: #f2e0bd;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Capuche', sans-serif;
+}
+
+.footer {
+    background-color: #d90d43;
+    color: #f6eed8;
+    font-family: 'Capuche', sans-serif;
+}
+
+.titulo-footer {
+    text-align: center;
+    font-family: 'LemonMilk', sans-serif;
+}
+
+/* Incorporação da fonte "Capuche" */
+@font-face {
+    font-family: 'Capuche';
+    src: url('/front/fonts/Capuche Trial.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Estilos para a logo */
+.logo {
+    margin-left: 20px;
+}
+
+/* Estilos para os links de navegação */
+.nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centralize as palavras do menu */
+}
+
+.nav li {
+    margin: 0 20px; /* Aumente ou diminua o valor para ajustar o espaçamento entre as palavras */
+}
+
+.nav a {
+    color: #f2e0bd; /* Altere a cor das palavras do menu */
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Estilos para a barra de pesquisa */
+.caixa-de-busca {
+    display: flex;
+    align-items: center;
+    background-color: #f2e0bd;
+    color: #f2b035;
+    border-radius: 5px;
+    padding: 5px;
+    width: 35%;
+    margin: 0 auto;
+}
+
+.lupa {
+    margin-right: 5px;
+    color: #4B3C2F;
+}
+
+.campo-de-busca {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    flex-grow: 1;
+}
+
+/* Estilos para o ícone do usuário */
+.user-icon {
+    cursor: pointer;
+    margin-left: 10px; /* Ajuste a margem esquerda para mover o ícone para a esquerda */
+}
+
+.user-icon-container {
+    position: relative;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+}
+
+/* Estilos para o menu de usuário */
+.user-menu {
+    position: absolute;
+    background-color: #f2e0bd;
+    color: #f2b035;
+    list-style: none;
+    padding: 10px;
+    display: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 196, 0, 0.2);
+    z-index: 1;
+    text-align: center;
+    top: 100%;
+    right: 0;
+}
+
+.user-menu li {
+    margin: 10px 0;
+    text-decoration: none; /* Remova o sublinhado dos textos do menu */
+}
+
+.user-menu li.separator {
+    border-top: 0.9px solid #f2b035;
+}
+
+.logo {
+    width: 130px;
+    height: 95px;
+}
+
+.line-one {
+    height: 7px;
+    background-color: #f2e0bd;
+    margin-bottom: 4px;
+}
+
+.line-two {
+    height: 7px;
+    background-color: #f2b035;
+    margin-bottom: 4px;
+}
+
+.line-three {
+    height: 7px;
+    background-color: #d90d43;
+    margin-bottom: 4px;
+}
+
+.line-four {
+    height: 7px;
+    background-color: #700927;
+}
+
+.fline-four {
+    height: 7px;
+    background-color: #700927;
+    margin-bottom: 4px;
+}
+
+.fline-one {
+    height: 7px;
+    background-color: #f2e0bd;
+}
+
+.rotina-inicio {
+    background-color: #f6eed8;
+}
+
+.titulo {
+    font-family: 'Starborn', sans-serif;
+    text-align: left;
+} 
+
+.texto {
+    text-align: right;
+}
+
+.text {
+    text-align: center;
+    font-family: 'Starborn', sans-serif;
+    color: #700927;
+    font-size: 25px;
+}
+
+.grid-container-semana {
+    display: grid;
+    grid-template-columns: repeat(2, 7fr);
+    text-align: center;
+    align-items: center;
+    border-radius: 7px;
+    justify-items: center;
+    width: 3vw;
+    background-color: #f2e0bd;
+    font-family: 'Starborn', sans-serif;
+}
