@@ -353,7 +353,7 @@ label {
     font-family: 'Capuche', sans-serif;
 }
 
-.input-form {
+.input-form, .textarea-form {
     background-color: #F2E0BD;
     width: 30vw;
     height: 6vh;
@@ -362,6 +362,7 @@ label {
     font-size: medium;
     color: #790927;
     border: solid #f2b035;
+    font-family: 'LemonMilk';
 }
 
 section {
@@ -372,7 +373,7 @@ section {
 .titulo-pergunta {
     color: #d90d43;
     font-size: 25px;
-    font-family: 'Capuche', sans-serif;
+    font-family: 'Starborn', sans-serif;
 }
 
 .texto-perguntas {
