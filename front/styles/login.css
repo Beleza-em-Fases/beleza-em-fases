@@ -67,6 +67,11 @@ input {
     font-size: 23px;
 }
 
+a {
+    color: #f2b035;
+    text-decoration: none;
+}
+
 .user-icon {
     margin-left: 130px;
 }

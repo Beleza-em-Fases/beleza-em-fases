@@ -372,13 +372,13 @@ section {
 /*Luiza: Feito com o intuito de organizar todo o main da página contato*/
 .titulo-pergunta {
     color: #d90d43;
-    font-size: 25px;
-    font-family: 'Starborn', sans-serif;
+    font-size: 20px;
+    font-family: 'Capuche', sans-serif;
 }
 
 .texto-perguntas {
     font-family: 'LemonMilk', sans-serif;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 main {
@@ -422,6 +422,7 @@ main {
     color: #f2b035;
     margin-top: 0.7%;
     margin-left: 0.7%;
+    font-family: 'Starborn', sans-serif;
 }
 
 .slider-container {

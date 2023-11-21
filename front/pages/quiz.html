@@ -24,11 +24,62 @@
           </div>
           <!--Maria: Barra de navegação do site-->
           <ul class="nav">
-              <li><a href="produtos.html">Produtos</a></li>
-              <li><a href="forum.html">Forum</a></li>
-              <li><a href="quiz.html">Quiz</a></li>
-              <li><a href="glossario.html">Glossário</a></li>
-          </ul>
+            <li class="submenu" id="produtos-menu">
+                <a class="menu-words" href="produtos.html">Produtos</a>
+                <ul class="submenu-options">
+                    <li class="submenu-option">
+                        <a href="#">Passos da rotina</a>
+                        <ul class="submenu-options-inner">
+                            <li><a href="#">Pré-Shampoo</a></li>
+                            <li><a href="#">Hidratação</a></li>
+                            <li><a href="#">Nutrição</a></li>
+                            <li><a href="#">Reconstrução</a></li>
+                            <li><a href="#">Acidificação</a></li>
+                            <li><a href="#">Umectação</a></li>
+                            <li><a href="#">Tratamento Noturno</a></li>
+                            <li><a href="#">Protetor Térmico</a></li>
+                            <li><a href="#">Finalizadores</a></li>
+                            <li><a href="#">Óleos</a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu-option">
+                        <a href="#">Indicações</a>
+                        <ul class="submenu-options-inner">
+                            <li><a href="#">Couro Cabeludo</a></li>
+                            <li><a href="#">Cabelo Seco</a></li>
+                            <li><a href="#">Cabelo Sem Brilho</a></li>
+                            <li><a href="#">Cabelo Quebradiço</a></li>
+                            <li><a href="#">Coloridos</a></li>
+                            <li><a href="#">Loiros</a></li>
+                            <li><a href="#">Com Progressiva</a></li>
+                            <li><a href="#">Muito Frizz</a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu-option">
+                        <a href="#">Curvatura</a>
+                        <ul class="submenu-options-inner">
+                            <li><a href="#">Cabelo Liso</a></li>
+                            <li><a href="#">Cabelo Ondulado</a></li>
+                            <li><a href="#">Cabelo Cacheado</a></li>
+                            <li><a href="#">Cabelo Crespo</a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu-option">
+                        <a href="#">Coloração</a>
+                        <ul class="submenu-options-inner">
+                            <li><a href="#">Tonalizante</a></li>
+                            <li><a href="#">Tinta Capilar</a></li>
+                            <li><a href="#">Oxidante</a></li>
+                            <li><a href="#">Descolorante</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Ver Tudo</a></li>
+                </ul>
+            </li>
+            <li><a class="menu-words" href="forum.html">Forum</a></li>
+            <li><a class="menu-words" href="quiz.html">Quiz</a></li>
+            <li><a class="menu-words" href="glossario.html">Glossário</a></li>
+        </ul>
           <!--Maria:Caixa de pesquisa, ainda não está funcional por exigir o SQL-->
           <div class="caixa-de-busca">
               <i class="fas fa-search lupa"></i> 
@@ -42,7 +93,7 @@
               </div>
               <!--Maria: Menu do usuário ao clicar no ícone-->
               <ul class="user-menu" id="userMenu">
-                  <li><a href="perfil.html">Perfil</a></li>
+                  <li><a href="cadastro.html">Perfil</a></li>
                   <li><a href="cronograma.html">Cronograma</a></li>
                   <li><a href="configuracoes.html">Configurações</a></li>
                   <li class="separator"></li>
@@ -52,13 +103,104 @@
       </div>
     </header>
 
+    <!--Maria: As div abaixo representam os detalhes das linhas abaixo do header, não possui funcionalidades nem conteúdo, apenas para fins estéticos do site-->
     <div class="line-one"></div>
     <div class="line-two"></div>
     <div class="line-three"></div>
     <div class="line-four"></div>
 
+    <!--Laís, Lie: -->
     <main>
-        a
+        <br>
+        <br>
+        <div id="quiz-container">
+            <h1>Quiz Beleza em Fases</h1>
+            <br>
+            <br>
+            <!-- Pergunta 1 -->
+            <div class="question active" id="question1">
+                <p class="p-quiz">Digite o seu nome:</p>
+                <br>
+                <input class="input" type="text" id="name" name="name" required>
+            </div>
+            
+            <!-- Pergunta 2 -->
+            <div class="question" id="question2">
+                <p class="p-quiz">Qual o seu tipo de cabelo?</p>
+                <ul class="options">
+                    <li class="option" onclick="checkAnswer(2, 1)">Liso</li>
+                    <li class="option" onclick="checkAnswer(2, 2)">Ondulado</li>
+                    <li class="option" onclick="checkAnswer(2, 3)">Cacheado</li>
+                    <li class="option" onclick="checkAnswer(2, 4)">Crespo</li>
+                </ul>
+            </div>
+            
+            <!-- Pergunta 3 -->
+            <div class="question" id="question3">
+                <p class="p-quiz">Qual o seu nivel de dano químico?</p>
+                <ul class="options">
+                    <li class="option" onclick="checkAnswer(3, 1)">Sem química</li>
+                    <li class="option" onclick="checkAnswer(3, 2)">Pouco danificado</li>
+                    <li class="option" onclick="checkAnswer(3, 3)">Danificado</li>
+                    <li class="option" onclick="checkAnswer(3, 4)">Muito danificado</li>
+                </ul>
+            </div>
+
+            <!-- Pergunta 4 -->
+            <div class="question" id="question4">
+                <p class="p-quiz">Qual o comprimento do seu cabelo?</p>
+                <ul class="options">
+                    <li class="option" onclick="checkAnswer(4, 1)">Curto</li>
+                    <li class="option" onclick="checkAnswer(4, 2)">Médio</li>
+                    <li class="option" onclick="checkAnswer(4, 3)">Longo</li>
+                </ul>
+            </div>
+
+            <!-- Pergunta 5 -->
+            <div class="question" id="question5">
+                <p class="p-quiz">Qual a espessura do seu cabelo?</p>
+                <ul class="options">
+                    <li class="option" onclick="checkAnswer(5, 1)">Fino</li>
+                    <li class="option" onclick="checkAnswer(5, 2)">Médio</li>
+                    <li class="option" onclick="checkAnswer(5, 3)">Grosso</li>
+                </ul>
+            </div>
+
+            <!-- Pergunta 6 -->
+            <div class="question" id="question6">
+                <p class="p-quiz">Qual o nível da oleosidade do seu couro cabeludo?</p>
+                <ul class="options">
+                    <li class="option" onclick="checkAnswer(6, 1)">Normal</li>
+                    <li class="option" onclick="checkAnswer(6, 2)">Oleoso</li>
+                    <li class="option" onclick="checkAnswer(6, 3)">Misto</li>
+                    <li class="option" onclick="checkAnswer(6, 4)">Seco</li>
+                </ul>
+            </div>
+
+            <!-- Pergunta 7 -->
+            <div class="question" id="question7">
+                <p class="p-quiz">Qual a força do cabelo?</p>
+                <ul class="options">
+                    <li class="option" onclick="checkAnswer(7, 1)">Fraco</li>
+                    <li class="option" onclick="checkAnswer(7, 2)">Forte</li>
+                </ul>
+            </div>
+
+            <!-- Pergunta 8 -->
+            <div class="question" id="question8">
+                <p class="p-quiz">Qual o nível da elasticidade do cabelo?</p>
+                <ul class="options">
+                    <li class="option" onclick="checkAnswer(8, 1)">Rigido</li>
+                    <li class="option" onclick="checkAnswer(8, 2)">Normal</li>
+                    <li class="option" onclick="checkAnswer(8, 3)">Elastico</li>
+                </ul>
+            </div>
+
+            <button class="btn-submit" onclick="nextQuestion()">Próxima Pergunta</button>
+            <div class="result" id="result"></div>
+        </div> 
+        <br>
+        <br>   
     </main>
 
     <div class="fline-four"></div>
@@ -68,15 +210,16 @@
 
     <!--Maria: HTML e CSS do Footer feito por mim com modelo do Bootstrap-->
     <footer class="py-3">
-        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-          <li class="nav-item"><a href="/front/home.html" class="nav-link px-2">Home</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2">Privacidade</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2">Contato</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2">FAQs</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2">Sobre Nós</a></li>
-        </ul>
-        <p class="text-center texto">&copy; Beleza Em Fases, Inc</p>
-      </footer>
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="/front/pages/home.html" class="menu-words px-2">Home</a></li>
+        <li class="nav-item"><a href="#" class="menu-words px-2">Privacidade</a></li>
+        <li class="nav-item"><a href="/front/pages/contato.html" class="menu-words px-2">Contato</a></li>
+        <li class="nav-item"><a href="#" class="menu-words px-2">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="menu-words px-2">Sobre Nós</a></li>
+      </ul>
+      <p class="text-center texto">&copy; Beleza Em Fases, Inc</p>
+    </footer>
       <script src="/front/scripts/quiz.js"></script>
 </body>
 </html>
+

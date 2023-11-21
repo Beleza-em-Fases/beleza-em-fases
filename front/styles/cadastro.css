@@ -31,6 +31,17 @@ input {
     border: solid #f2b035;
 }
 
+.p2 {
+    color: #790927;
+    margin-left: 30%;
+    font-size: 23px;
+}
+
+a {
+    color: #f2b035;
+    text-decoration: none;
+}
+
 /* Incorporação da fonte "Capuche" */
 @font-face {
     font-family: 'Capuche';

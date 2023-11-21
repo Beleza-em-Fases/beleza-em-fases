@@ -1,5 +1,5 @@
 /*Maria: Feito com o intuito de deixar o site rente as bordas do navegador*/
-body  {
+body {
     margin: 0px;
 }
 
@@ -22,28 +22,38 @@ body  {
     font-style: normal;
 }
 
-/* Maria: Incorporação da fonte "Moon", escolhida para textos do site */
+/* Maria: Incorporação da fonte "Starborn", escolhida para títulos do site */
 @font-face {
-    font-family: 'Moon';
-    src: url('/front/fonts/Moon\ Light.otf') format('opentype');
-    font-weight: bold;
-    font-style: bold;
+    font-family: 'Starborn';
+    src: url('/front/fonts/Starborn.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Maria: Incorporação da fonte "Chicago Darling", escolhida para textos do site */
+@font-face {
+    font-family: 'LemonMilk';
+    src: url('/front/fonts/LEMONMILK-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 .titulo {
     font-family: 'Capuche', sans-serif;
 }
 
+.titulo2 {
+    font-family: 'Starborn', sans-serif;
+}
+
 .texto {
-    font-family: 'Moon', sans-serif;
+    font-family: 'LemonMilk', sans-serif;
 }
 
 /* Maria: Personalizando a logo do site */
 .logo {
     margin-left: 20px;
     margin-right: 200px;
-    width: 130px;
-    height: 95px;
 }
 
 /* Maria: Estilos para os links de navegação */
@@ -52,22 +62,78 @@ body  {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Centraliza as palavras do menu */
+    justify-content: center;
+    /* Centraliza as palavras do menu */
 }
 
 .nav li {
-    margin: 0 20px; /* Ajusta o espaçamento entre as palavras */
+    margin: 0 20px;
+    /* Ajusta o espaçamento entre as palavras */
 }
 
-.nav li a {
-    color: #f2e0bd; /* Altera a cor das palavras do menu */
+.menu-words {
+    color: #f2e0bd;
+    /* Altera a cor das palavras do menu */
     text-decoration: none;
     font-size: 20px;
-    transition: color 0.3s; /* Adiciona uma transição para a mudança de cor */
+    transition: color 0.3s, font-size 0.3s;
+    /* Adiciona transição para mudança de cor e tamanho da fonte */
 }
 
-.nav a:hover {
-    color: #f2b035; /* Altera a cor ao passar o mouse sobre as palavras do menu */
+.menu-words:hover {
+    color: #f2b035;
+    /* Altera a cor ao passar o mouse sobre as palavras do menu */
+    font-size: 21.5px;
+    /* Aumenta o tamanho da fonte ao passar o mouse */
+}
+
+.submenu {
+    position: relative;
+    color: #f2b035;
+}
+
+.submenu-options {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    background-color: #f2e0bd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    text-decoration: none;
+    font-size: 19.5px;
+    width: 260px;
+    list-style: none;
+    /* Remove a bolinha da lista */
+}
+
+.submenu-options-inner {
+    display: none;
+    flex-direction: column;
+    background-color: #f2e0bd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 2;
+    text-decoration: none;
+    font-size: 19.5px;
+    width: 280px;
+    list-style: none;
+    /* Remove a bolinha da lista */
+}
+
+.display-active {
+    display: flex;
+}
+
+.submenu-options a,
+.submenu-options-inner a {
+    color: #f2b035;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s, font-size 0.3s;
 }
 
 /* Maria: Estilos para a barra de pesquisa */
@@ -84,7 +150,8 @@ body  {
 
 .lupa {
     margin-right: 5px;
-    color: #4B3C2F; /* Defina a cor do ícone da lupa */
+    color: #4B3C2F;
+    /* Defina a cor do ícone da lupa */
 }
 
 .campo-de-busca {
@@ -97,28 +164,32 @@ body  {
 /*Maria: Altera a cor do placeholder*/
 ::-webkit-input-placeholder {
     color: #816024;
- }
- 
- :-moz-placeholder { /* Para Firefox 18- */
-    color: #816024;  
- }
- 
- ::-moz-placeholder {  /* Para Firefox 19+ */
-    color: #816024;  
- }
- 
- :-ms-input-placeholder {  
-    color: #816024;  
- }
+}
+
+:-moz-placeholder {
+    /* Para Firefox 18- */
+    color: #816024;
+}
+
+::-moz-placeholder {
+    /* Para Firefox 19+ */
+    color: #816024;
+}
+
+:-ms-input-placeholder {
+    color: #816024;
+}
 
 /* Maria: TENTATIVA do responsivo do Header, igor tenha piedade */
 @media (max-width: 768px) {
     .nav {
-        display: none; /* Oculta o menu principal */
+        display: none;
+        /* Oculta o menu principal */
     }
 
     .caixa-de-busca {
-        max-width: 100%; /* Preenche a largura da tela */
+        max-width: 100%;
+        /* Preenche a largura da tela */
     }
 }
 
@@ -127,6 +198,11 @@ body  {
     cursor: pointer;
     margin-left: 10px;
     margin-right: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.user-icon:hover {
+    transform: scale(1.1);
 }
 
 .user-icon-container {
@@ -160,17 +236,25 @@ body  {
 }
 
 .user-menu li a {
-    text-decoration: none; /* Maria: Remove o sublinhado dos textos do menu */
+    text-decoration: none;
+    /* Maria: Remove o sublinhado dos textos do menu */
     color: #f2b035;
-    transition: color 0.3s; /* Adiciona uma transição para a mudança de cor */
+    transition: color 0.3s;
+    /* Adiciona uma transição para a mudança de cor */
 }
 
 .user-menu li a:hover {
-    color: #d90d43; /* Altera a cor ao passar o mouse sobre as palavras */
+    color: #d90d43;
+    /* Altera a cor ao passar o mouse sobre as palavras */
 }
 
 .user-menu li.separator {
     border-top: 0.9px solid #f2b035;
+}
+
+.logo {
+    width: 130px;
+    height: 95px;
 }
 
 /* Maria: Personalização para o main */
@@ -218,4 +302,97 @@ footer {
 .fline-one {
     height: 7px;
     background-color: #f2e0bd;
+}
+
+/*Lís, Lie:*/
+#quiz-container {
+    background-color: #f2e0bd;
+    border: 3px solid #f2b035;
+    border-radius: 10px;
+    align-items: center;
+    padding: 20px;
+    max-width: 1800px;
+    height: 500px;
+    width: 80%; 
+    margin: 0 auto;
+    color: #d90d43;
+    text-align: center;
+    font-family: 'Starborn', sans-serif;
+}
+
+.p-quiz{
+    color: #700927;
+    font-family: 'Capuche', sans-serif;
+    text-align: center;
+    font-size: 30px;
+}
+
+.input[type="text"] {
+    border: 3px solid #f2b035;
+    background-color: #f8f4eaf2;
+    width: 50%;
+    height: 40px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.options {
+    list-style: none;
+    padding: 0;
+}
+
+.option {
+    background-color: #f6eed8;
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50px;
+    border: 2px solid #f2b035;
+    color: #700927;
+    font-family: 'LemonMilk', sans-serif;
+}
+
+.option:hover {
+    background-color: rgb(238, 214, 170);
+}
+
+.btn-submit {
+    background-color: #f2b035;
+    border: none;
+    color: #f6eed8;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Capuche', sans-serif;
+}
+
+.result {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Adição de estilo para esconder as perguntas não atuais */
+.question:not(.active) {
+    display: none;
+}
+
+.option.selected {
+    background-color: #d90d43; /* Cor de fundo para indicar seleção */
+    color: #f6eed8;
+}
+
+.result-message {
+    font-family: 'Capuche', sans-serif; 
+    font-size: 30px; /* Tamanho da fonte */
+    font-weight: bold; /* Peso da fonte */
+    color: #700927; /* Cor do texto */
 }
