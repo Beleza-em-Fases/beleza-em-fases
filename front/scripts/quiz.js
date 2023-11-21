@@ -87,9 +87,9 @@ function showResult() {
 }
 
 //Maria: Lógica de funcionamento do botão
-const btnQuiz = document.getElementById("result")
+const btnQuiz = document.getElementById("btn-quiz")
 const divText = document.getElementById("div-text")
 
 btnQuiz.addEventListener('click', function (event) {
-    divText.remove()
+    divText.classList.add('d-none')
 })

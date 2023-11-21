@@ -377,6 +377,21 @@ footer {
     background-color: rgb(238, 214, 170);
 }
 
+.suboption {
+    background-color: #f6eed8;
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50px;
+    border: 2px solid #f2b035;
+    color: #700927;
+    font-family: 'LemonMilk', sans-serif;
+}
+
+.suboption:hover {
+    background-color: rgb(238, 214, 170);
+}
+
 .btn-submit {
     background-color: #f2b035;
     border: none;
