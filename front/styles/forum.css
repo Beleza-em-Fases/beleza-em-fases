@@ -255,6 +255,17 @@ body  {
     border-top: 0.9px solid #f2b035;
 }
 
+.div-text {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto}
+
+.p-text {
+    font-family: 'LemonMilk', sans-serif;
+    color: #d90d43;
+    justify-content: center;
+}
+
 /* Maria: Personalização para o main */
 main {
     background-color: #f6eed8;
@@ -452,11 +463,11 @@ b {
 label {
     display: block;
     margin-bottom: 8px;
-    color: #700927;
+    color: #d90d43;
     font-family: "Capuche", sans-serif;
 }
 
-input,textarea {
+.input {
     width: 80%;
     cursor: pointer;
     padding: 20px 20px;
@@ -466,6 +477,8 @@ input,textarea {
     border: 3px solid #f2b035;
     border-radius: 10px;
     box-sizing: border-box;
+    color: #700927;
+    font-family: 'LemonMilk';
 }
 
 .button {
@@ -479,9 +492,15 @@ input,textarea {
     border: none;
     cursor: pointer;
     padding: 20px 20px;
-    margin-left: 40%;
     text-decoration: none;
     text-align: center;
+    transition: color 0.3s; /* Adiciona uma transição para a mudança de cor */
+    transition: transform 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #d90d43; /* Altera a cor ao passar o mouse sobre as palavras */
+    transform: scale(1.1);
 }
 
 hr {
