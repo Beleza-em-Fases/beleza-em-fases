@@ -86,7 +86,7 @@ function showResult() {
   document.querySelector('.btn-submit').style.display = 'none';
 }
 
-//Maria: Lógica de funcionamento do botão
+//Maria: Apaga o texto ao passar a primeira pagina
 const btnQuiz = document.getElementById("btn-quiz")
 const divText = document.getElementById("div-text")
 
