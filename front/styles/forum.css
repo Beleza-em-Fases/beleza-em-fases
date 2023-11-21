@@ -314,12 +314,12 @@ footer {
 }
 
 .subforum-title{
-    background-color:#f2b035;
+    background-color:#d90d43;
     padding: 5px;
     border-radius: 5px;
     margin:4px;
     font-family: 'Starborn', sans-serif;
-    color:#d90d43;
+    color:#f2b035;
     text-align: center;
 }
 
@@ -482,4 +482,10 @@ input,textarea {
     margin-left: 40%;
     text-decoration: none;
     text-align: center;
+}
+
+hr {
+    border: none; /* Remova a borda padrão */
+    height: 2.5px; /* Defina a altura desejada para a linha */
+    background-color: #d90d43; /* Substitua 'red' pela cor desejada */
 }
