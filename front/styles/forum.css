@@ -221,7 +221,7 @@ footer {
 }
 
 
-/*Laís*/
+/*Laís, Lie*/
 .container{
     margin: 20px;
     padding: 20px;
@@ -241,9 +241,15 @@ footer {
     text-align: center;
 }
 
-.subforum-row{
-    display: grid;
-    grid-template-columns: 7% 60% 13% 20%;
+.subforum-mensagem{
+    font-family: 'Capuche', sans-serif;
+    color:#d90d43;
+}
+
+.subforum-forum{
+    font-family: 'Capuche', sans-serif;
+    color:#d90d43;
+    text-align: center;
 }
 
 .subforum-column{
@@ -262,10 +268,6 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.subforum-icon i{
-    font-size: 45px;
 }
 
 .subforum-devider{
@@ -305,10 +307,6 @@ footer {
         grid-template-columns: 10% 60% 10% 20%;
     }
 
-    .subforum-icon i{
-        font-size: 35px;
-    }
-
     html{
         font-size: 14px;
     }
@@ -318,31 +316,18 @@ footer {
     }
 }
 
-@font-face {
-    font-family:aquire;
-    src:url(aquire.otf);
-}
-
 /*Navbar para smartphones*/
 @media screen and (max-width: 460px){
     .navigation{
         max-height: auto;
     }
-    
-    .close-icon i{
-        font-size:30px;
-    }
-    
+
     .nav-item a{
         float:left;
         display:inline;
         margin-inline: 3px;
         font-size: 10px;
         padding: 5px;
-    }
-    
-    .bar-icon{
-        font-size: 30px;
     }
  
     .brand{
@@ -369,3 +354,50 @@ footer {
     font-weight:bold;
 }
 
+
+p{
+    color: #700927;
+}
+
+small {
+    color: #700927;
+}
+
+b {
+    color: #f2b035;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #700927;
+    font-family: "Capuche", sans-serif;
+}
+
+input,textarea {
+    width: 80%;
+    cursor: pointer;
+    padding: 20px 20px;
+    background-color: #eae0cc;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 3px solid #f2b035;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.button {
+    font-family: 'Moon', sans-serif;
+    background: #f2b035;
+    color: #f5ead5;
+    border-radius: 20px;
+    height: 10vh; 
+    width: 13vw;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    padding: 20px 20px;
+    margin-left: 40%;
+    text-decoration: none;
+    text-align: center;
+}

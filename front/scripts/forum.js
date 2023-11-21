@@ -10,7 +10,7 @@ userIcon.addEventListener('click', function () {
     }
 });
 
-//Laís: 
+//Laís, Lie: 
 //NavBar
 function hideIconBar(){
     var iconBar = document.getElementById("iconBar");
@@ -37,3 +37,4 @@ function showReply(){
     var replyArea = document.getElementById("reply-area");
     replyArea.classList.remove("hide");
 }
+
