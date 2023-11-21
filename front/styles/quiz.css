@@ -52,6 +52,17 @@ body {
     font-family: 'LemonMilk', sans-serif;
 }
 
+.div-text {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto}
+
+.p-text {
+    font-family: 'LemonMilk', sans-serif;
+    color: #d90d43;
+    justify-content: center;
+}
+
 /* Maria: Personalizando a logo do site */
 .logo {
     margin-left: 20px;
@@ -323,10 +334,11 @@ footer {
 }
 
 .p-quiz{
-    color: #700927;
+    color: #d90d43;
     font-family: 'Capuche', sans-serif;
     text-align: center;
     font-size: 30px;
+    margin-bottom: 2px
 }
 
 .input[type="text"] {
@@ -336,6 +348,9 @@ footer {
     height: 40px;
     border-radius: 20px;
     margin-bottom: 30px;
+    color: #700927;
+    font-family: 'LemonMilk';
+    padding: 15px;
 }
 
 .question {

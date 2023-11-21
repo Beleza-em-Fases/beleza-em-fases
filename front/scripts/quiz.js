@@ -85,3 +85,11 @@ function showResult() {
   // Oculte o botão "Próxima Pergunta" após o término do quiz
   document.querySelector('.btn-submit').style.display = 'none';
 }
+
+//Maria: Lógica de funcionamento do botão
+const btnQuiz = document.getElementById("result")
+const divText = document.getElementById("div-text")
+
+btnQuiz.addEventListener('click', function (event) {
+    divText.remove()
+})
