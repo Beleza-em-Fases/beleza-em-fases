@@ -21,7 +21,7 @@ export const getUsuario = (req, res) => {
 }
 
 export const postUsuarioLogin = (req, res) => {
-    const q = "SELECT * FROM Usuario WHERE email = ? and senha = ?"; // Maria: Consulta todos usuarios do sistema
+    const q = "SELECT * FROM Usuario WHERE email = ? and senha = ?"; // Maria: Consulta os dados para fazer login
 
     const values = [ // Maria: Valores com os objetos do sistema
         req.body.email,
@@ -30,6 +30,19 @@ export const postUsuarioLogin = (req, res) => {
 
     db.query(q, [...values], (error, data) =>{ // Maria: Realiza uma query, recebe o parametro do erro e dos dados
         if(error) return res.json(`Erro: ${error}`); // Maria: Em caso de erro
+        return res.status(200).json(data); // Maria: Se não retorna uma resposta com status de sucesso
+    })
+}
+
+export const postUsuarioEmail = (req, res) => {
+    const q = "SELECT * FROM Usuario WHERE email = ?"; // Maria: Consulta o usuario de email x
+    const values = [ // Maria: Valores com os objetos do sistema
+        req.body.email    
+    ]
+
+    db.query(q, [...values], (error, data) =>{ // Maria: Realiza uma query, recebe o parametro do erro e dos dados
+        if(error) return res.json(`Erro: ${error}`); // Maria: Em caso de erro
+        console.log("Chegou aqui")
         return res.status(200).json(data); // Maria: Se não retorna uma resposta com status de sucesso
     })
 }
@@ -61,6 +74,19 @@ export const putUsuarios = (req, res) => {
     ]
 
     db.query(q, [...values, req.params.id], (error) =>{
+        if(error) return res.json(`Erro: ${error}`); // Maria: Em caso de erro
+        return res.status(200).json("Usuário alterado com sucesso!");
+    })
+}
+
+export const putUsuarioSenha = (req, res) => {
+    const q = "UPDATE Usuario SET `senha` = ? WHERE `email` = ?"; //Atualiza a senha do usuario
+
+    const values = [
+        req.body.senha
+    ]
+
+    db.query(q, [...values, req.params.email], (error) =>{
         if(error) return res.json(`Erro: ${error}`); // Maria: Em caso de erro
         return res.status(200).json("Usuário alterado com sucesso!");
     })

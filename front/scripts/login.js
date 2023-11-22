@@ -42,7 +42,7 @@ function buscarUsuario(email, senha) {
                 }
                 else{
                     console.log("Login Efetuado!")
-                    // Maria: Signific
+                    // Maria: Significa que o login foi efetuado
                 }
             })
             
