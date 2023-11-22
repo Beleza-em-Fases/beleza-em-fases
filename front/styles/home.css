@@ -54,6 +54,8 @@ body {
 .logo {
     margin-left: 20px;
     margin-right: 200px;
+    width: 130px;
+    height: 95px;
 }
 
 /* Maria: Estilos para os links de navegação */
@@ -250,11 +252,6 @@ body {
 
 .user-menu li.separator {
     border-top: 0.9px solid #f2b035;
-}
-
-.logo {
-    width: 130px;
-    height: 95px;
 }
 
 /* Maria: Personalização para o main */
