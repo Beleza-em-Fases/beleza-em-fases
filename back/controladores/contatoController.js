@@ -31,6 +31,6 @@ export const postContato = (req, res) => {
 
     db.query(q, [values], (error) =>{
         if(error) return res.json(`Erro: ${error}`); // Maria: Em caso de erro
-        return res.status(200).json("Usuário criado com sucesso!");
+        return res.status(200).json("Contato criado com sucesso!");
     })
 }

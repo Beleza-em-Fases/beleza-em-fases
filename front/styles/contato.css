@@ -388,6 +388,19 @@ section {
     font-size: 16.5px;
 }
 
+.div-text {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.p-text {
+    font-family: 'LemonMilk', sans-serif;
+    color: #d90d43;
+    justify-content: center;
+}
+
 main {
     background-color: #f6eed8;
     display: flex;

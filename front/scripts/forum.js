@@ -93,6 +93,6 @@ forumForm.addEventListener('submit', function (event){
           }
       })
       .then(resposta => resposta.json())
-      .then(resultado => console.log(resultado))
+      .then(resultado => window.location.href = "forum.html")
       
 });

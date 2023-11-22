@@ -84,4 +84,31 @@ function previousSlide() {
 }
 
 showSlides();
-//Lógica dos botões - slide (Luiza)
+//Lógica dos botões - slide (Luiza
+
+// Maria: Cadastrando no banco
+const mensagemForm = document.getElementById("mensagemForm")
+
+mensagemForm.addEventListener('submit', function (event){
+    event.preventDefault()
+    console.log("teste contato - ")
+    let dados = {
+        "nome": document.getElementById("nome").value,
+        "email": document.getElementById("email").value,
+        "mensagem": document.getElementById("mensagem").value
+    }
+  
+    console.log(JSON.stringify(dados))
+  
+      // Redireciona o usuário para outra tela (substitua pelo URL desejado)
+       fetch("http://localhost:3030/contato/contatar", {
+          method: "POST",
+          body: JSON.stringify(dados),
+          headers:{
+              "Content-Type": "application/json"
+          }
+      })
+      .then(resposta => resposta.json())
+      .then(resultado => console.log(resultado))
+      
+});
