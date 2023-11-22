@@ -38,22 +38,19 @@ const submenus = document.querySelectorAll(".submenu");
 let currentQuestion = 1;
 
 function checkAnswer(questionNum, selectedOption) {
-  // Remova a classe 'selected' de todas as opções antes de adicionar à opção selecionada
+  // Remove a classe 'selected' de todas as opções antes de adicionar à opção selecionada
   const options = document.querySelectorAll('.question.active .option');
   options.forEach(option => option.classList.remove('selected'));
 
-  // Adicione a classe 'selected' à opção escolhida
+  // Adiciona a classe 'selected' à opção escolhida
   const selectedOptionElement = document.querySelector(`.question.active .options .option:nth-child(${selectedOption})`);
   if (selectedOptionElement) {
       selectedOptionElement.classList.add('selected');
   }
-
-  // Implemente a lógica para verificar a opção selecionada contra a resposta correta para cada pergunta
-  // Não incrementamos a pontuação neste exemplo, mas você pode adicionar essa lógica conforme necessário
 }
 
 function nextQuestion() {
-    // Esconda a pergunta atual
+    // Esconde a pergunta atual
     document.getElementById(`question${currentQuestion}`).classList.remove('active');
 
     // Incrementa o número da pergunta atual

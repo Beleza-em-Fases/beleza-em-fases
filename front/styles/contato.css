@@ -30,7 +30,7 @@ body {
     font-style: normal;
 }
 
-/* Maria: Incorporação da fonte "Chicago Darling", escolhida para textos do site */
+/* Maria: Incorporação da fonte "Lemon Milk", escolhida para textos do site */
 @font-face {
     font-family: 'LemonMilk';
     src: url('/front/fonts/LEMONMILK-Regular.otf') format('opentype');

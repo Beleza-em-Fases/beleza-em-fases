@@ -2,22 +2,40 @@
 body {
     background:url(/front/images/telas/telaLogin.jpg) no-repeat center center; 
     background-size: cover;
-    height: 900px;
+    height: 780px;
     font-family: 'Capuche', sans-serif;
 } 
 
-h1 {
-    color: #f2b035;
-    text-align: center;
-    font-size: 70px;
-    margin-right: 50%;
+/* Maria: Incorporação da fonte "Capuche", escolhida para títulos do site */
+@font-face {
+    font-family: 'Capuche';
+    src: url('/front/fonts/Capuche Trial.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.login {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-    margin-bottom: auto
+/* Maria: Incorporação da fonte "Starborn", escolhida para títulos do site */
+@font-face {
+    font-family: 'Starborn';
+    src: url('/front/fonts/Starborn.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Maria: Incorporação da fonte "Lemon Milk", escolhida para textos do site */
+@font-face {
+    font-family: 'LemonMilk';
+    src: url('/front/fonts/LEMONMILK-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    color: #f2b035;
+    font-size: 70px;    
+    margin-left: 480px;
+    margin-top: 200px;
+    font-family: 'Starborn';
 }
 
 /* Incorporação da fonte "Capuche" */
@@ -30,7 +48,7 @@ h1 {
 
 label {
     font-family: 'Capuche', sans-serif;
-    color: #790927;
+    color: #d90d43;
     margin-left: 10%;
     font-size: 35px;
 }
@@ -41,9 +59,11 @@ input {
     height: 4vh;
     border-radius: 20px;
     margin-left: 10%;
+    font-size: x-large;
     color: #790927;
     border: solid #f2b035;
     background-color: #F2E0BD;
+    font-family: 'LemonMilk', sans-serif;
 }
 
 .botao {
@@ -60,17 +80,25 @@ input {
     margin-left: 20%;
     text-decoration: none;
     text-align: center;
+    transition: color 0.3s; /* Adiciona uma transição para a mudança de cor */
+    transition: transform 0.3s ease-in-out;
 }
 
+.botao:hover {
+    background-color: #d90d43; /* Altera a cor ao passar o mouse sobre as palavras */
+    transform: scale(1.1);
+}
+
+
 .p1 {
-    color: #790927;
     font-size: 22px;
     text-align: center;
+    margin-right: 40px;
 }
 
 .p2 {
-    color: #790927;
-    margin-left: 15%;
+    color: #d90d43;
+    margin-left: 340px;
     font-size: 23px;
 }
 
