@@ -318,12 +318,12 @@ footer {
     height: 18px;
     position: absolute;
     transform: rotate(135deg);
-    border: solid #f2b035;
+    border: 2px solid #f30041;
     border-width: 0 6px 6px 0;
     top: 50%;
     left: 50%;
     margin-top: -9px;
-    margin-left: -4px;
+    margin-left: -5px;
 }
 
 /*Laís/Lie: ajusto a seta next */
@@ -346,6 +346,8 @@ footer {
     background-color: #f2b035 !important;
 }
 
+
+/*Luiza e maria*/
 .container-dicas {
     display: flex;
 }
@@ -380,44 +382,12 @@ footer {
     font-family: 'Moon Light', sans-serif;
 }
 
-.grid-item-indicacao {
-    margin: 0 4vw 0 4vw;
-    background: #f2e0bd;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10%;
-    height: 15vh;
-    width: 10vw;
-    font-size: 10px;
-    color: #f2b035;
-    align-items: left;
-}
-
-.grid-controls-indicacao {
-    display: flex;
-    align-items: center;
-}
-
 .title-grid {
     font-size: 25px;
     font-weight: 600;
     color: #700927;
     margin-top: 0.7%;
     margin-left: 0.7%;
-}
-
-.grid-item-indicacao {
-    margin: 0 4vw 0 4vw;
-    background: #f2e0bd;
-    padding: 20px;
-    text-align: center;
-    align-items: center;
-    border-radius: 10%;
-    height: 6vh;
-    width: 10vw;
-    font-size: 22px;
-    font-weight: 500;
-    color: #f2b035;
 }
 
 .slider-container {
@@ -439,14 +409,6 @@ footer {
 .slider-buttons-dicas:hover {
     color: #f2b035;
     font-size: 25px;
-}
-
-.slider-buttons-indicacao {
-    border: none;
-    background-color: #f6eed8;
-    font-size: 20px;
-    font-weight: 800;
-    cursor: pointer;
 }
 
 .grid-controls {
