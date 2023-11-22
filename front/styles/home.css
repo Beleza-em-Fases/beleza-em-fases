@@ -439,7 +439,7 @@ footer {
     transition: color 0.3s, font-size 0.3s
 }
 
-.slider-buttons-perguntas:hover {
+.slider-buttons-dicas:hover {
     color: #f2b035;
     font-size: 25px;
 }
