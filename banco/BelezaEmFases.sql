@@ -75,6 +75,22 @@ INSERT INTO Produtos(nome, marca, descricao, funcao, preco, imagem) VALUES(
 'Máscara Morte Súbita', 'Lola Cosmetics', 'Máscara de hidratação para cabelos danificados. Lola Cosmetics Morte Súbita recupera as pontas duplas, hidrata e dá brilho e a suavidade. A Máscara Morte Súbita, de Lola Cosmetics, conta com ingredientes naturais que fortalecem a estrutura dos fios contra a quebra e protegem os cabelos dos danos causados pelo calor e exposição aos raios ultravioletas. O creme tem nutrientes que resgatam a hidratação natural da fibra capilar, o brilho e a suavidade dos fios', 'Hidronutrição', 63.90, 'https://tfdfn2.vtexassets.com/arquivos/ids/220906/mascara-lola-morte-subita-450g.jpg?v=638168148221100000'
 );
 
+INSERT INTO Comentario (nome, titulo, publicacao, comentario)
+VALUES ('Ana', 'Incrível!', '2023-11-22', 'Estou tão empolgada com os resultados e em aprender mais sobre cuidados capilares. Adotar um programa capilar realmente transformou a saúde do meu cabelo. Mal posso esperar para trocar experiências e dicas com todos vocês!');
+
+INSERT INTO Comentario (nome, titulo, publicacao, comentario)
+VALUES ('Beatriz', 'Surpreendente!', '2023-11-20', 'Estou amando os resultados do meu programa capilar! Meu cabelo está mais saudável e brilhante. Vamos compartilhar nossas histórias e dicas de cuidados!');
+
+INSERT INTO Comentario (nome, titulo, publicacao, comentario)
+VALUES ('Carolina', 'Fantástico!', '2023-11-18', 'Adotei um programa capilar recentemente e já estou sentindo a diferença! Meu cabelo está mais forte e sedoso. Ansiosa para compartilhar experiências com vocês.');
+
+INSERT INTO Comentario (nome, titulo, publicacao, comentario)
+VALUES ('Daniela', 'Transformador!', '2023-11-15', 'Que jornada incrível com o meu programa capilar! Meu cabelo nunca esteve tão saudável. Vamos trocar dicas e motivar uns aos outros nessa jornada capilar!');
+
+INSERT INTO Comentario (nome, titulo, publicacao, comentario)
+VALUES ('Eduarda', 'Maravilhoso!', '2023-11-10', 'Estou fascinada com os resultados do meu programa capilar. Meu cabelo está mais hidratado e com vida. Mal posso esperar para compartilhar experiências com a comunidade!');
+
+
 SELECT * FROM Comentario;
 SELECT * FROM Usuario;
 SELECT * FROM Produtos;
