@@ -1,3 +1,5 @@
+/* Lorrany / Maria */
+
 /*Maria: Feito com o intuito de deixar o site rente as bordas do navegador*/
 body  {
     margin: 0px;
@@ -218,4 +220,50 @@ footer {
 .fline-one {
     height: 7px;
     background-color: #f2e0bd;
+}
+
+.slider-container {
+    border: none;
+    background-color: #f6eed8;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.grid-item-produtos-img, .grid-item-produtos-img2, .grid-item-produtos-img3, 
+.grid-item-produtos-img4,.grid-item-produtos-img5, .grid-item-produtos-img6 {
+    
+    margin: 3vw 2vw;
+    background: #f2e0bd;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    border-radius: 10%;
+    height: 10vh;
+    width: 10vw;
+    font-size: medium;
+    font-weight: 500;
+    color: #700927;
+    font-family: 'Moon Light', sans-serif;
+}
+
+.pesquise1 {
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+    padding: 7px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.lupinha1 {
+    margin-right: 15px;
+    color: #4B3C2F; /* Defina a cor do ícone da lupa */
+}
+
+.pesquisar1 {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    flex-grow: 1;
 }
