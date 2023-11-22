@@ -85,7 +85,7 @@ export const postProdutos = (req, res) => {
 }
 
 export const putProduto = (req, res) => {
-    const q = "UPDATE Usuario SET `nome = ?`, `marca = ?`, `descricao = ?`, `funcao = ?`, `preco = ?`, `imagem = ?` WHERE `id` = ?";
+    const q = "UPDATE Usuario SET `nome = ?`, `marca = ?`, `descricao = ?`, `funcao = ?`, `preco = ?`, `imagem = ?` WHERE `id` = ?"; // Maria: Realiza o update do produto pelo id
 
     const values = [
         req.body.nome,
@@ -103,7 +103,7 @@ export const putProduto = (req, res) => {
 }
 
 export const deleteProduto = (req, res) => {
-    const q = "DELETE FROM Produtos WHERE `id` = ?";
+    const q = "DELETE FROM Produtos WHERE `id` = ?"; // Maria: Realiza o delete do comentário pelo id
 
     db.query(q, [req.params.id], (error) =>{
         if(error) return res.json(`Erro: ${error}`); // Maria: Em caso de erro

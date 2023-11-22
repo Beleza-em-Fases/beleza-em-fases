@@ -36,12 +36,12 @@ export const postQuiz = (req, res) => {
 
     db.query(q, [values], (error) =>{
         if(error) return res.json(`Erro: ${error}`); // Maria: Em caso de erro
-        return res.status(200).json("Usuário criado com sucesso!");
+        return res.status(200).json("Quiz criado com sucesso!");
     })
 }
 
 export const putQuiz = (req, res) => {
-    const q = "UPDATE Cabelo SET `curvatura = ?`, `nivelDanos = ?`, `comprimento = ?`, `espessura = ?`, `oleosidade = ?`, `forca = ?`, `elasticidade = ?`, `condicaoAtual = ?` WHERE `id` = ?";
+    const q = "UPDATE Cabelo SET `curvatura = ?`, `nivelDanos = ?`, `comprimento = ?`, `espessura = ?`, `oleosidade = ?`, `forca = ?`, `elasticidade = ?`, `condicaoAtual = ?` WHERE `id` = ?"; // Maria: Realiza o update do quiz pelo id
 
     const values = [
         req.body.curvatura, 
@@ -56,15 +56,15 @@ export const putQuiz = (req, res) => {
 
     db.query(q, [...values, req.params.id], (error) =>{
         if(error) return res.json(`Erro: ${error}`); // Maria: Em caso de erro
-        return res.status(200).json("Usuário alterado com sucesso!");
+        return res.status(200).json("Quiz alterado com sucesso!");
     })
 }
 
 export const deleteQuiz = (req, res) => {
-    const q = "DELETE FROM Cabelo WHERE `id` = ?";
+    const q = "DELETE FROM Cabelo WHERE `id` = ?"; // Maria: Realiza o delete do comentário pelo id
 
     db.query(q, [req.params.id], (error) =>{
         if(error) return res.json(`Erro: ${error}`); // Maria: Em caso de erro
-        return res.status(200).json("Usuário deletado com sucesso!");
+        return res.status(200).json("Quiz deletado com sucesso!");
     })
 }

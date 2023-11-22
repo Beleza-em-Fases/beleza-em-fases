@@ -3,6 +3,7 @@ import { getComentarios, getComentario, getComentariosMes, getComentariosAno, po
 
 const roteador = express.Router();
 
+// Maria: Rotas para os métodos do controller
 roteador.get("/", getComentarios)
 roteador.get("/:id", getComentario)
 roteador.get("/mes/:mes", getComentariosMes)

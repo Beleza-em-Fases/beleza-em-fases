@@ -7,7 +7,7 @@ export const getContatos = (req, res) => {
 
     db.query(q, (error, data) =>{ // Maria: Realiza uma query, recebe o parametro do erro e dos dados
         if(error) return res.json(`Erro: ${error}`); // Maria: Em caso de erro
-        return res.status(200).json(data); // Maria: Se não retorna uma resposta com status de sucesso
+        return res.status(200).json(data); // Maria: Se não, retorna uma resposta com status de sucesso
     })
 }
 
@@ -16,7 +16,7 @@ export const getContato = (req, res) => {
 
     db.query(q, [req.params.id], (error, data) =>{ // Maria: Realiza uma query, recebe o parametro do erro e dos dados
         if(error) return res.json(`Erro: ${error}`); // Maria: Em caso de erro
-        return res.status(200).json(data); // Maria: Se não retorna uma resposta com status de sucesso
+        return res.status(200).json(data); // Maria: Se não, retorna uma resposta com status de sucesso
     })
 }
 
@@ -31,6 +31,6 @@ export const postContato = (req, res) => {
 
     db.query(q, [values], (error) =>{
         if(error) return res.json(`Erro: ${error}`); // Maria: Em caso de erro
-        return res.status(200).json("Contato criado com sucesso!");
+        return res.status(200).json("Contato criado com sucesso!"); // Maria: Se não, retorna uma resposta com status de sucesso
     })
 }

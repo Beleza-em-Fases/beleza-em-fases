@@ -3,6 +3,7 @@ import { getAllQuiz, getQuiz, postQuiz, putQuiz, deleteQuiz} from "./controlador
 
 const roteador = express.Router();
 
+// Maria: Rotas para os métodos do controller
 roteador.get("/", getAllQuiz)
 roteador.get("/:id", getQuiz)
 

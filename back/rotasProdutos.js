@@ -3,6 +3,7 @@ import { getProdutos, getProduto, getProdutosMarca, getProdutosNome, getProdutos
 
 const roteador = express.Router();
 
+// Maria: Rotas para os métodos do controller
 roteador.get("/", getProdutos)
 roteador.get("/:id", getProduto)
 roteador.get("/marca/:marca", getProdutosMarca)

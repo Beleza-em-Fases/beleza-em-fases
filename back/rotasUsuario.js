@@ -3,6 +3,7 @@ import { getUsuarios, getUsuario, postUsuarioLogin, postUsuarioEmail, postUsuari
 
 const roteador = express.Router();
 
+// Maria: Rotas para os métodos do controller
 roteador.get("/", getUsuarios)
 roteador.get("/:id", getUsuario)
 

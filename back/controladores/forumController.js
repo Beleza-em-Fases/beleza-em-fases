@@ -42,8 +42,8 @@ export const postComentarios = (req, res) => {
     const q = "INSERT INTO Comentario(`nome`, `titulo`, `publicacao`, `comentario`) VALUES(?)"; // Maria: Cria um novo comentario
 
     const values = [ // Maria: Valores com os objetos do sistema
-        req.body.nome,
-        req.body.titulo, // Maria: Requisição com o seu corpo e os objetos
+        req.body.nome, // Maria: Requisição com o seu corpo e os objetos
+        req.body.titulo,
         req.body.publicacao,
         req.body.comentario,
     ]
@@ -55,7 +55,7 @@ export const postComentarios = (req, res) => {
 }
 
 export const putComentario = (req, res) => {
-    const q = "UPDATE Comentario SET `titulo = ?`, `publicacao = ?`, `comentario = ?` WHERE `id` = ?";
+    const q = "UPDATE Comentario SET `titulo = ?`, `publicacao = ?`, `comentario = ?` WHERE `id` = ?"; // Maria: Realiza o update do comentário pelo id
 
     const values = [
         req.body.titulo, 
@@ -70,7 +70,7 @@ export const putComentario = (req, res) => {
 }
 
 export const deleteComentario = (req, res) => {
-    const q = "DELETE FROM Comentario WHERE `id` = ?";
+    const q = "DELETE FROM Comentario WHERE `id` = ?"; // Maria: Realiza o delete do comentário pelo id
 
     db.query(q, [req.params.id], (error) =>{
         if(error) return res.json(`Erro: ${error}`); // Maria: Em caso de erro

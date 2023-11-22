@@ -64,7 +64,7 @@ export const postUsuarios = (req, res) => {
 }
 
 export const putUsuarios = (req, res) => {
-    const q = "UPDATE Usuario SET `nome` = ?, `nascimento` = ?, `email` = ?, `senha` = ? WHERE `id` = ?";
+    const q = "UPDATE Usuario SET `nome` = ?, `nascimento` = ?, `email` = ?, `senha` = ? WHERE `id` = ?"; // Maria: Realiza o update do usuario pelo id
 
     const values = [
         req.body.nome,
@@ -80,7 +80,7 @@ export const putUsuarios = (req, res) => {
 }
 
 export const putUsuarioSenha = (req, res) => {
-    const q = "UPDATE Usuario SET `senha` = ? WHERE `email` = ?"; //Atualiza a senha do usuario
+    const q = "UPDATE Usuario SET `senha` = ? WHERE `email` = ?"; //Maria: Atualiza a senha do usuario
 
     const values = [
         req.body.senha
@@ -93,7 +93,7 @@ export const putUsuarioSenha = (req, res) => {
 }
 
 export const deleteUsuarios = (req, res) => {
-    const q = "DELETE FROM Usuario WHERE `id` = ?";
+    const q = "DELETE FROM Usuario WHERE `id` = ?"; // Maria: Realiza o delete do usuario pelo id
 
     db.query(q, [req.params.id], (error) =>{
         if(error) return res.json(`Erro: ${error}`); // Maria: Em caso de erro
