@@ -3,7 +3,7 @@
 import { db } from "../db.js";
 
 export const getComentarios = (req, res) => {
-    const q = "SELECT * FROM Comentarios"; // Maria: Consulta todos comentarios do forum
+    const q = "SELECT * FROM Comentario"; // Maria: Consulta todos comentarios do forum
 
     db.query(q, (error, data) =>{ // Maria: Realiza uma query, recebe o parametro do erro e dos dados
         if(error) return res.json(`Erro: ${error}`); // Maria: Em caso de erro
@@ -12,7 +12,7 @@ export const getComentarios = (req, res) => {
 }
 
 export const getComentario = (req, res) => {
-    const q = "SELECT * FROM Comentarios WHERE id = ?"; // Maria: Consulta um comentario de id x
+    const q = "SELECT * FROM Comentario WHERE id = ?"; // Maria: Consulta um comentario de id x
 
     db.query(q, [req.params.id], (error, data) =>{ // Maria: Realiza uma query, recebe o parametro do erro e dos dados
         if(error) return res.json(`Erro: ${error}`); // Maria: Em caso de erro
@@ -21,7 +21,7 @@ export const getComentario = (req, res) => {
 }
 
 export const getComentariosMes = (req, res) => {
-    const q = "SELECT * FROM Comentarios WHERE MONTH(publicacao)"; // Maria: Consulta os comentarios de tal mes
+    const q = "SELECT * FROM Comentario WHERE MONTH(publicacao)"; // Maria: Consulta os comentarios de tal mes
 
     db.query(q, [req.params.id], (error, data) =>{ // Maria: Realiza uma query, recebe o parametro do erro e dos dados
         if(error) return res.json(`Erro: ${error}`); // Maria: Em caso de erro
@@ -30,7 +30,7 @@ export const getComentariosMes = (req, res) => {
 }
 
 export const getComentariosAno = (req, res) => {
-    const q = "SELECT * FROM Comentarios WHERE YEAR(publicacao)"; // Maria: Consulta os comentarios de tal ano
+    const q = "SELECT * FROM Comentario WHERE YEAR(publicacao)"; // Maria: Consulta os comentarios de tal ano
 
     db.query(q, [req.params.id], (error, data) =>{ // Maria: Realiza uma query, recebe o parametro do erro e dos dados
         if(error) return res.json(`Erro: ${error}`); // Maria: Em caso de erro
@@ -39,7 +39,7 @@ export const getComentariosAno = (req, res) => {
 }
 
 export const postComentarios = (req, res) => {
-    const q = "INSERT INTO Comentarios(`nome`, `titulo`, `publicacao`, `comentario`) VALUES(?)"; // Maria: Cria um novo comentario
+    const q = "INSERT INTO Comentario(`nome`, `titulo`, `publicacao`, `comentario`) VALUES(?)"; // Maria: Cria um novo comentario
 
     const values = [ // Maria: Valores com os objetos do sistema
         req.body.nome,
@@ -55,7 +55,7 @@ export const postComentarios = (req, res) => {
 }
 
 export const putComentario = (req, res) => {
-    const q = "UPDATE Comentarios SET `titulo = ?`, `publicacao = ?`, `comentario = ?` WHERE `id` = ?";
+    const q = "UPDATE Comentario SET `titulo = ?`, `publicacao = ?`, `comentario = ?` WHERE `id` = ?";
 
     const values = [
         req.body.titulo, 
@@ -70,7 +70,7 @@ export const putComentario = (req, res) => {
 }
 
 export const deleteComentario = (req, res) => {
-    const q = "DELETE FROM Comentarios WHERE `id` = ?";
+    const q = "DELETE FROM Comentario WHERE `id` = ?";
 
     db.query(q, [req.params.id], (error) =>{
         if(error) return res.json(`Erro: ${error}`); // Maria: Em caso de erro
