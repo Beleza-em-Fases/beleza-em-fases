@@ -76,10 +76,10 @@ INSERT INTO Produtos(nome, marca, descricao, funcao, preco, imagem) VALUES(
 );
 
 SELECT * FROM Comentario;
-
--- Possiveis Selects para a tabela produto
+SELECT * FROM Usuario;
 SELECT * FROM Produtos;
 
+-- Possiveis Selects para a tabela produto
 SELECT * FROM Produtos
 ORDER BY nome;
 
