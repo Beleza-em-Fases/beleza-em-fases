@@ -52,6 +52,10 @@
     color: #f2e0bd; /* Altere a cor das palavras do menu */
     text-decoration: none;
     font-size: 20px;
+    color: #f2e0bd; /* Altera a cor das palavras do menu */
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s; /* Adiciona uma transição para a mudança de cor */
 }
 
 /* Estilos para a barra de pesquisa */
@@ -112,6 +116,8 @@
 .user-menu li {
     margin: 10px 0;
     text-decoration: none; /* Remova o sublinhado dos textos do menu */
+    color: #f2b035;
+    transition: color 0.3s; /* Adiciona uma transição para a mudança de cor */
 }
 
 .user-menu li.separator {
