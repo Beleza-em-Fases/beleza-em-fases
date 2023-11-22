@@ -113,6 +113,7 @@
     <main>
         <br>
         <br>
+        <form action="post" id="quiz"></form>
         <div id="quiz-container">
             <h1>Quiz Capilar</h1>
             <div class="div-text" id="div-text"><p class="p-text"><strong>Cronograma Capilar Personalizado: Descubra a Melhor Rotina capilar para seu Cabelo!</strong> Estamos aqui para ajudar! Faça o nosso teste rápido e descubra a rotina ideal para você. Cuide de seus fios da melhor maneira possível - comece agora</p></div>
@@ -121,7 +122,7 @@
             <!-- Pergunta 1 -->
             <div class="question active" id="question1">
                 <p class="p-quiz">Qual nome gostaria de ser chamado?</p>
-                <input class="input" type="text" id="name" name="name" required>
+                <input class="input" type="text" id="nome" name="nome" required>
             </div>
             
             <!-- Pergunta 2 -->
@@ -196,7 +197,7 @@
                 </ul>
             </div>
 
-            <button class="btn-submit" id="btn-quiz" onclick="nextQuestion()">Próxima Pergunta</button>
+            <button type="submit" class="btn-submit" id="btn-quiz" onclick="nextQuestion()">Próxima Pergunta</button>
             <div class="result" id="result"></div>
         </div> 
         <br>

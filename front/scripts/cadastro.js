@@ -1,4 +1,6 @@
 // Maria, Lie
+
+//Maria: Cadastra usuario no banco
 document.getElementById("cadastroForm").addEventListener("submit", function (event) {
     event.preventDefault();
 
