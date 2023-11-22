@@ -436,6 +436,12 @@ footer {
     cursor: pointer;
     font-family: 'Starborn';
     color: #700927;
+    transition: color 0.3s, font-size 0.3s
+}
+
+.slider-buttons-perguntas:hover {
+    color: #f2b035;
+    font-size: 25px;
 }
 
 .slider-buttons-indicacao {

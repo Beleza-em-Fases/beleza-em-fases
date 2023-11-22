@@ -314,6 +314,13 @@ footer {
     margin-left: 35%;
     text-decoration: none;
     text-align: center;
+    transition: color 0.3s; /* Adiciona uma transição para a mudança de cor */
+    transition: transform 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #d90d43; /* Altera a cor ao passar o mouse sobre as palavras */
+    transform: scale(1.1);
 }
 
 #mensagem {
@@ -348,7 +355,7 @@ textarea {
 }
 
 label {
-    color: #790927;
+    color: #d90d43;
     font-size: 30px;
     font-family: 'Capuche', sans-serif;
 }
@@ -372,13 +379,13 @@ section {
 /*Luiza: Feito com o intuito de organizar todo o main da página contato*/
 .titulo-pergunta {
     color: #d90d43;
-    font-size: 20px;
+    font-size: 24px;
     font-family: 'Capuche', sans-serif;
 }
 
 .texto-perguntas {
     font-family: 'LemonMilk', sans-serif;
-    font-size: 14px;
+    font-size: 16.5px;
 }
 
 main {
@@ -436,6 +443,14 @@ main {
     font-size: 20px;
     font-weight: 800;
     cursor: pointer;
+    color: #d90d43;
+    font-family: 'Starborn';
+    transition: color 0.3s, font-size 0.3s
+}
+
+.slider-buttons-perguntas:hover {
+    color: #f2b035;
+    font-size: 25px;
 }
 
 .grid-controls {
