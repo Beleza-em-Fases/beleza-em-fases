@@ -434,6 +434,8 @@ footer {
     font-size: 20px;
     font-weight: 800;
     cursor: pointer;
+    font-family: 'Starborn';
+    color: #700927;
 }
 
 .slider-buttons-indicacao {

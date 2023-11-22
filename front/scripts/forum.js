@@ -62,3 +62,37 @@ function showReply(){
     replyArea.classList.remove("hide");
 }
 
+// Maria: Cadastrando no banco
+const forumForm = document.getElementById("forumForm")
+const data = new Date() //Tratanto a data 
+var dia = "" +data.getDate()
+var mes = "" +data.getMonth()
+var ano = "" +data.getFullYear()
+var publicacao = ""+ano+"-"+mes+"-"+dia
+
+
+forumForm.addEventListener('submit', function (event){
+    event.preventDefault()
+    console.log(publicacao)
+    console.log("teste comentario - ")
+    let dados = {
+        "nome": document.getElementById("name").value,
+        "titulo": document.getElementById("title").value,
+        "publicacao": publicacao,
+        "comentario": document.getElementById("message").value
+    }
+  
+    console.log(JSON.stringify(dados))
+  
+      // Redireciona o usuário para outra tela (substitua pelo URL desejado)
+       fetch("http://localhost:3030/forum/postar", {
+          method: "POST",
+          body: JSON.stringify(dados),
+          headers:{
+              "Content-Type": "application/json"
+          }
+      })
+      .then(resposta => resposta.json())
+      .then(resultado => console.log(resultado))
+      
+});

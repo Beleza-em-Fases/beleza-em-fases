@@ -39,9 +39,10 @@ export const getComentariosAno = (req, res) => {
 }
 
 export const postComentarios = (req, res) => {
-    const q = "INSERT INTO Comentarios(`titulo`, `publicacao`, `comentario`) VALUES(?)"; // Maria: Cria um novo comentario
+    const q = "INSERT INTO Comentarios(`nome`, `titulo`, `publicacao`, `comentario`) VALUES(?)"; // Maria: Cria um novo comentario
 
     const values = [ // Maria: Valores com os objetos do sistema
+        req.body.nome,
         req.body.titulo, // Maria: Requisição com o seu corpo e os objetos
         req.body.publicacao,
         req.body.comentario,
