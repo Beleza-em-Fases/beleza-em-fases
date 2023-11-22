@@ -1,0 +1,122 @@
+/*Lie, Lorrany*/
+body {
+    background:url(/front/images/telas/telaLogin.jpg) no-repeat center center; 
+    background-size: cover;
+    height: 780px;
+    font-family: 'Capuche', sans-serif;
+} 
+
+/* Maria: Incorporação da fonte "Capuche", escolhida para títulos do site */
+@font-face {
+    font-family: 'Capuche';
+    src: url('/front/fonts/Capuche Trial.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Maria: Incorporação da fonte "Starborn", escolhida para títulos do site */
+@font-face {
+    font-family: 'Starborn';
+    src: url('/front/fonts/Starborn.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Maria: Incorporação da fonte "Lemon Milk", escolhida para textos do site */
+@font-face {
+    font-family: 'LemonMilk';
+    src: url('/front/fonts/LEMONMILK-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    color: #f2b035;
+    font-size: 55px;    
+    margin-left: 320px;
+    margin-top: 200px;
+    font-family: 'Starborn';
+}
+
+/* Incorporação da fonte "Capuche" */
+@font-face {
+    font-family: 'Capuche';
+    src: url('/front/fonts/Capuche Trial.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+label {
+    font-family: 'Capuche', sans-serif;
+    color: #d90d43;
+    margin-left: 10%;
+    font-size: 35px;
+}
+
+input {
+    font-family: 'Moon', sans-serif;
+    width: 44vw;
+    height: 4vh;
+    border-radius: 20px;
+    margin-left: 10%;
+    font-size: x-large;
+    color: #790927;
+    border: solid #f2b035;
+    background-color: #F2E0BD;
+    font-family: 'LemonMilk', sans-serif;
+}
+
+.botao {
+    font-family: 'Capuche', sans-serif;
+    background: #f2b035;
+    color: #f5ead5;
+    border-radius: 20px;
+    height: 10vh; 
+    width: 13vw;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    padding: 20px 20px;
+    margin-left: 20%;
+    text-decoration: none;
+    text-align: center;
+    transition: color 0.3s; /* Adiciona uma transição para a mudança de cor */
+    transition: transform 0.3s ease-in-out;
+}
+
+.botao:hover {
+    background-color: #d90d43; /* Altera a cor ao passar o mouse sobre as palavras */
+    transform: scale(1.1);
+}
+
+
+.p1 {
+    color: #d90d43;
+    font-size: 22px;
+    text-align: center;
+    margin-right: 100px;
+}
+
+.p2 {
+    color: #d90d43;
+    margin-left: 340px;
+    font-size: 23px;
+}
+
+a {
+    color: #f2b035;
+    text-decoration: none;
+}
+
+.user-icon {
+    margin-left: 130px;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+    top: 15vh;
+    left: 30vw;
+}
+
+/*Responsivo*/

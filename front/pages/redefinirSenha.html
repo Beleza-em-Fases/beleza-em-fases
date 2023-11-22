@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/front/images/favicon.svg" type="image/png">
-    <link rel="stylesheet" href="/front/styles/login.css">
-    <title>Login</title>
+    <link rel="stylesheet" href="/front/styles/redefinirSenha.css">
+    <title>Redefinir Senha</title>
 </head>
 <!-- Lie, Lorrany -->
 <body> 
     <header>
-        <h1> LOGIN </h1>
+        <h1> Redefinir Senha </h1>
         <form class="formLogin" id="formLogin">
             <div class="d-flex">
                 <label for="email"> Email </label>
@@ -19,15 +19,21 @@
                 <input type="email" id="email" name="email" required/>
                 <br>
                 <br>
-                <label for="senha"> Senha </label>
+                <label for="senha"> Senha Nova</label>
                 <br>
-                <input type="password" id="senha" name="senha" required/>
-                <p class="p1"> <a href="redefinirSenha.html"> Esqueceu sua senha?</a> </p>
+                <input type="password" id="senhaNova" name="senhaNova" required/>
+                <br>
+                <br>
+                <label for="senha"> Confirmar Senha</label>
+                <br>
+                <input type="password" id="senhaNova" name="senhaNova" required/>
+                <br>
+                <p class="p1"> Lembrou a senha?<a href="login.html"> Faça login</a> </p>
                 <p class="p2"> Não é cadastrado? <a href="cadastro.html"> Cadastra-se</a> </p>
-                <button type="submit" class="botao" id="btnLogin"> ENTRAR </button>
+                <button type="submit" class="botao" id="btnLogin"> SALVAR </button>
             </div>
         </form>
     </header>
 </body>
-<script src="/front/scripts/login.js"></script>
+<script src="/front/scripts/redefinirSenha.js"></script>
 </html>
