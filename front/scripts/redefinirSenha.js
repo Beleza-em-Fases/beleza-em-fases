@@ -44,7 +44,7 @@ function buscarEmail() {
                     }
                     console.log(JSON.stringify(senhaNova))
                     
-                        fetch("http://localhost:3030/usuario/redefinir-senha/"+email.value, {
+                        fetch("http://localhost:3030/usuario/redefinir/"+email.value, {
                             method: "PUT",
                             body: JSON.stringify(senhaNova),           
                             headers:{

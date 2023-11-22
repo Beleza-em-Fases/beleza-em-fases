@@ -11,7 +11,7 @@ roteador.post("/buscar-email", postUsuarioEmail)
 roteador.post("/cadastrar", postUsuarios)
 
 roteador.put("/:id", putUsuarios)
-roteador.put("redefinir-senha/:email", putUsuarioSenha)
+roteador.put("redefinir/:email", putUsuarioSenha)
 
 roteador.delete("/:id", deleteUsuarios)
 
