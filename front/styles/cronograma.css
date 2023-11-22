@@ -45,7 +45,8 @@
 }
 
 .nav li {
-    margin: 0 20px; /* Aumente ou diminua o valor para ajustar o espaçamento entre as palavras */
+    padding: 0 20px;
+    /* Ajusta o espaçamento entre as palavras */
 }
 
 .nav a {

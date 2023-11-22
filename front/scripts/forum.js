@@ -10,6 +10,7 @@ userIcon.addEventListener('click', function () {
     }
 });
 
+// Maria: Lógica do menu de produtos
 const submenus = document.querySelectorAll(".submenu");
 
         submenus.forEach(element => {
@@ -84,7 +85,7 @@ forumForm.addEventListener('submit', function (event){
   
     console.log(JSON.stringify(dados))
   
-      // Redireciona o usuário para outra tela (substitua pelo URL desejado)
+      // Redireciona o usuário para outra tela 
        fetch("http://localhost:3030/forum/postar", {
           method: "POST",
           body: JSON.stringify(dados),

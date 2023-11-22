@@ -10,6 +10,7 @@ userIcon.addEventListener('click', function () {
     }
 });
 
+// Maria: Lógica do menu de produtos
 const submenus = document.querySelectorAll(".submenu");
 
         submenus.forEach(element => {

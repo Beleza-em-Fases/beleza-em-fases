@@ -10,6 +10,7 @@ userIcon.addEventListener('click', function () {
     }
 });
 
+// Maria: Lógica do menu de produtos
 const submenus = document.querySelectorAll(".submenu");
 
         submenus.forEach(element => {
@@ -34,7 +35,7 @@ const submenus = document.querySelectorAll(".submenu");
             })
         });
 
-// Laís, Lie:
+// Laís, Lie, Maria:
 let currentQuestion = 1;
 let quizAnswers = {};
 
@@ -52,6 +53,7 @@ function checkAnswer(questionNum, selectedOption) {
   }
 }
 
+// Maria: Verifica qual a opção que o usuario escolheu
 function selectedOption(questionNumber) {
     let options = document.querySelectorAll(`#question${questionNumber} .options .option`);
     console.log("options: "+questionNumber);
@@ -82,39 +84,47 @@ function nextQuestion() {
     nextQuestionElement.classList.add('active');
   } else {
     console.log("chegou no showResult")
-    // Se não houver mais perguntas, exiba o resultado final
-    showResult();
+    // Se não houver mais perguntas, pula para próxima pagina
+    verificarFucionamento();
   }
 }
 const quiz = document.getElementById("quiz")
 console.log(quiz)
-//Maria: cadastra no banco
-function showResult() {
-    console.log("entrou no showResult")
-    console.log("opcao 2: "+selectedOption(3))
-    console.log("opcao 3: "+selectedOption(4))
-    
+
+//Maria: verifica se as informações estão sendo pegas
+function verificarFucionamento() {
+    console.log("entrou no cadastro")
+    console.log("opcao 2: "+selectedOption(2))
+    console.log("opcao 3: "+selectedOption(3))
+    console.log("opcao 4: "+selectedOption(4))
+    console.log("opcao 5: "+selectedOption(5))
+    console.log("opcao 6: "+selectedOption(6))
+    console.log("opcao 7: "+selectedOption(7))
+    console.log("opcao 8: "+selectedOption(8))
+    console.log("opcao 9: "+selectedOption(9))
 }
-let contadorQuiz=0
+
+let contadorQuiz=0 // Maria: Serve para que o quiz não seja enviado antes de terminar todas perguntas
 const btnQuiz = document.getElementById("btn-quiz")
 
-btnQuiz.addEventListener("click", function (event) {
+btnQuiz.addEventListener("click", function (event) { // Maria: Verifica as vezes que o usuario clica no botão
     event.preventDefault();
     console.log( document.getElementById("nome").value)
     contadorQuiz++
     console.log(contadorQuiz)
     console.log("opcao "+contadorQuiz+": "+selectedOption(contadorQuiz))
-    if(contadorQuiz == 8){
+    if(contadorQuiz == 9){
 
     let dados = {
-        "name": document.getElementById("nome").value,
-        "question2": selectedOption(2),
-        "question3": selectedOption(3),
-        "question4": selectedOption(4),
-        "question5": selectedOption(5),
-        "question6": selectedOption(6),
-        "question7": selectedOption(7),
-        "question8": selectedOption(8)
+        //"name": document.getElementById("nome").value,
+        "curvatura": selectedOption(2),
+        "nivelDanos": selectedOption(3),
+        "comprimento": selectedOption(4),
+        "espessura": selectedOption(5),
+        "oleosidade": selectedOption(6),
+        "forca": selectedOption(7),
+        "elasticidade": selectedOption(8),
+        "condicaoAtual": selectedOption(9)
     };    
     console.log("opcao 1: "+selectedOption(2))
     console.log("opcao 2: "+selectedOption(3))
@@ -131,27 +141,25 @@ console.log(JSON.stringify(dados))
 })
 .then(response => response.json())
 .then(data => {
-  console.log('Respostas do quiz enviadas com sucesso!', data);
-  var resultElement = document.getElementById('result');
-resultElement.innerHTML = "Você concluiu o quiz! Redirecionando para o cronograma...";
+    console.log('Respostas do quiz enviadas com sucesso!', data);
+    var resultElement = document.getElementById('result');
+    resultElement.innerHTML = "Você concluiu o quiz! Redirecionando para o cronograma...";
 
-resultElement.classList.add('result-message');
+    resultElement.classList.add('result-message');
 
-// Redireciona para a página cronograma.html após um breve atraso (por exemplo, 2 segundos)
-setTimeout(function () {
-    window.location.href = "cronograma.html";
-}, 2000); 
+    // Maria: Após o final do quiz, redireciona para página do cronograma com 2 sec de intervalo
+    setTimeout(function () {
+        window.location.href = "cronograma.html";
+    }, 2000); 
+    })
+    .catch(error => console.error('Erro ao enviar respostas do quiz:', error));
+
+    // Oculte o botão "Próxima Pergunta" após o término do quiz
+    document.querySelector('.btn-submit').style.display = 'none';
+    }
 })
-.catch(error => console.error('Erro ao enviar respostas do quiz:', error));
-
-// Oculte o botão "Próxima Pergunta" após o término do quiz
-document.querySelector('.btn-submit').style.display = 'none';
-}
-})
-
 
 // Maria: Apaga o texto ao passar a primeira página
-
 const divText = document.getElementById("div-text")
 
 btnQuiz.addEventListener('click', function (event) {

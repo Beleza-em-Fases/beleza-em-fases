@@ -69,7 +69,7 @@ body {
 }
 
 .nav li {
-    margin: 0 20px;
+    padding: 0 20px;
     /* Ajusta o espaçamento entre as palavras */
 }
 
@@ -104,7 +104,7 @@ body {
     z-index: 2;
     text-decoration: none;
     font-size: 19.5px;
-    width: 260px;
+    width: 290px;
     list-style: none;
     /* Remove a bolinha da lista */
 }

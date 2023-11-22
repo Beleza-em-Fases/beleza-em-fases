@@ -10,6 +10,7 @@ userIcon.addEventListener('click', function () {
     }
 });
 
+// Maria: Lógica do menu de produtos
 const submenus = document.querySelectorAll(".submenu");
 
 submenus.forEach(element => {
@@ -100,7 +101,7 @@ mensagemForm.addEventListener('submit', function (event){
   
     console.log(JSON.stringify(dados))
   
-      // Redireciona o usuário para outra tela (substitua pelo URL desejado)
+      // Redireciona o usuário para outra tela 
        fetch("http://localhost:3030/contato/contatar", {
           method: "POST",
           body: JSON.stringify(dados),
@@ -109,6 +110,7 @@ mensagemForm.addEventListener('submit', function (event){
           }
       })
       .then(resposta => resposta.json())
-      .then(resultado => console.log(resultado))
+      .then(resultado =>  window.location.href = "contato.html") // Maria: Se o contato for enviado, a pagina recarrega
+
       
 });

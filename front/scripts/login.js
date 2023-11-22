@@ -42,7 +42,7 @@ function buscarUsuario(email, senha) {
                 }
                 else{
                     console.log("Login Efetuado!")
-                    window.location.href = "home.html";
+                    window.location.href = "home.html"; // Maria: Se o login for efetuado, direciona para o home
                 }
             })
             

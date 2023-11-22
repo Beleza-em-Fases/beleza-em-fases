@@ -5,15 +5,14 @@ document.getElementById("cadastroForm").addEventListener("submit", function (eve
     event.preventDefault();
 
     const senha = document.getElementById("senha").value;
-
     
-    // Verifica a força da senha
+    // Lie: Verifica a força da senha
     if (!verificarSenhaFraca(senha)) {
       exibirMensagem("A senha é fraca. Escolha uma senha com mais de oito caracteres.");
       return;
     }
 
-    let dados = {
+    let dados = { //Maria: Dados que são passados para o cadastro
       "nome": document.getElementById("nome").value,
       "nascimento": document.getElementById("data").value,
       "email": document.getElementById("email").value,
@@ -22,8 +21,7 @@ document.getElementById("cadastroForm").addEventListener("submit", function (eve
 
   console.log(JSON.stringify(dados))
 
-
-    // Redireciona o usuário para outra tela (substitua pelo URL desejado)
+    // Maria: Redireciona o usuário para outra tela
      fetch("http://localhost:3030/usuario/cadastrar", {
         method: "POST",
         body: JSON.stringify(dados),
@@ -32,13 +30,10 @@ document.getElementById("cadastroForm").addEventListener("submit", function (eve
         }
     })
     .then(resposta => resposta.json())
-    .then(resultado =>  window.location.href = "login.html")
-    
-   
-    
+    .then(resultado =>  window.location.href = "login.html") //Maria: Se o cadastro for efetuado, direciona para o login
 });
 
-  // Função para verificar a força da senha (exemplo simples)
+  // Lie: Função para verificar a força da senha 
 function verificarSenhaFraca(senha) {
     // Adicione suas regras para determinar a força da senha
     // Neste exemplo, verificamos se a senha tem pelo menos 8 caracteres

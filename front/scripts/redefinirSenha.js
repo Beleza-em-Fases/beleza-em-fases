@@ -1,8 +1,9 @@
-// Maria: Fazendo Login
+// Maria: Redefinindo a senha
 const email = document.getElementById("email")
 const senha = document.getElementById("senhaNova")
 const formNovaSenha = document.getElementById("formNovaSenha")
 
+// Maria: Verifica se o email existe no banco
 function buscarEmail() {
     console.log(email.value)
     console.log(senha.value)
@@ -33,6 +34,7 @@ function buscarEmail() {
     });
 }
 
+// Maria: Atualiza a senha
 formNovaSenha.addEventListener('submit', function (event) {
     event.preventDefault()
     console.log("Verificando email");
